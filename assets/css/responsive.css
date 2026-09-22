@@ -42,7 +42,7 @@
   .hero { align-items: center; text-align: left; }
   .hero__meta { flex-direction: column; align-items: flex-start; }
 
-  .hero__art-img { object-position: 20% 50%; }
+  .hero__art-img { object-position: 40% 32%; }
   .hero__rna-accent {
     background: linear-gradient(200deg,
       rgba(122, 92, 168, 0.5) 0%,
