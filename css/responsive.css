@@ -288,3 +288,26 @@
     scroll-behavior: auto;
   }
 }
+
+/* --- 2025 refresh: brand, figure, team --- */
+@media (max-width: 768px) {
+  .nav-logo { height: 38px; }
+  .nav-logo-text { font-size: 1.1rem; }
+
+  .hero__logo { width: 120px; }
+
+  .figure-wide { margin-top: var(--space-lg); }
+
+  .member-modal__panel { padding: var(--space-lg); }
+
+  .team-card--ghost { min-height: 220px; }
+
+  .pi-bio { margin-top: var(--space-lg); }
+}
+
+@media (max-width: 480px) {
+  .nav-logo { height: 34px; }
+  .nav-logo-text { display: none; }
+  .hero__logo { width: 100px; }
+  .join-list li { flex-direction: row; }
+}

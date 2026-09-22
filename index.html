@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DEAR Lab | Disease Engineering &amp; Advanced RNA Biology</title>
   <meta name="description" content="DEAR Lab at NUCSER, NITTE University led by Dr. Arpita Ghosh — advancing RNA biology, lncRNAs, mechanosensing, GBM disease modelling, quantum RNA sensing, and small molecule therapeutics.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,8 +19,9 @@
   <!-- Navigation -->
   <nav class="navbar navbar--transparent">
     <div class="container">
-      <a href="index.html" class="nav-brand">
-        <img src="assets/logo.jpg" alt="DEAR Lab" class="nav-logo">
+      <a href="index.html" class="nav-brand" aria-label="DEAR Lab home">
+        <img src="assets/logo-mark-light.png" alt="" class="nav-logo nav-logo--light" aria-hidden="true">
+        <img src="assets/logo-mark.png" alt="DEAR Lab" class="nav-logo nav-logo--dark">
         <div class="nav-logo-text">DEAR<span>lab</span></div>
       </a>
       <div class="nav-overlay"></div>
@@ -165,19 +167,9 @@
     </div>
 
     <div class="hero__content">
-      <img src="assets/logo.jpg" alt="DEAR Lab Logo" class="hero__logo">
+      <img src="assets/logo-mark-light.png" alt="DEAR Lab logo" class="hero__logo">
       <h1 class="hero__title">DEAR <span class="highlight">Lab</span></h1>
-      <p class="hero__subtitle">Disease Engineering and Advanced RNA Biology</p>
-      <p class="hero__tagline">Decoding RNA. Engineering Disease. Advancing Biology.</p>
-      
-      <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap; margin-bottom: var(--space-xl);">
-        <a href="research.html" class="btn btn--primary">
-          <i class="fas fa-microscope"></i> Explore Research
-        </a>
-        <a href="team.html" class="btn btn--white">
-          <i class="fas fa-users"></i> Meet the Team
-        </a>
-      </div>
+      <p class="hero__subtitle mb-xl">Disease Engineering and Advanced RNA Biology</p>
 
       <a href="#vision" class="hero__scroll" aria-label="Scroll down to Vision section">
         <span>Scroll Down</span>
@@ -193,209 +185,40 @@
     <div class="container">
       <div class="section-header">
         <span class="label">Our Vision</span>
-        <h2>Understanding RNA to Engineer Disease Solutions</h2>
+        <h2>Decoding RNA. Discovering vulnerabilities. Engineering solutions.</h2>
         <div class="divider"></div>
       </div>
-      
-      <div class="vision-content">
-        <div class="vision-text">
-          <p>
-            At the <strong>Disease Engineering and Advanced RNA Biology (DEAR) Lab</strong>, based at NUCSER, NITTE (Deemed to be University), Karnataka, we pioneer integrative approaches to unravel the complex regulatory architecture of non-coding RNAs and harness them for disease engineering.
-          </p>
-          <p>
-            Our core mission bridges fundamental discoveries in <strong>RNA biology</strong>—from regulatory long non-coding RNAs (lncRNAs) and microRNAs to higher-order G-quadruplex RNA conformations—with translational bioengineering. We explore <strong>cellular mechanobiology</strong> to determine how the physical microenvironment, substrate stiffness, and extracellular forces govern aggressive malignancies such as glioblastoma (GBM).
-          </p>
-          <p>
-            By coupling biomimetic 3D tumor models with pioneering <strong>quantum sensing</strong> technologies—utilizing nitrogen-vacancy (NV) diamond nanosensors—and novel small molecule and peptide nucleic acid (PNA) therapeutics, our laboratory aims to deliver targeted, transformative interventions for intractable diseases.
-          </p>
-          <div class="mt-md">
-            <a href="research.html" class="btn btn--outline">
-              Learn More About Our Approach <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
 
-        <div class="vision-image">
-          <img src="assets/team-photo.jpg" alt="DEAR Lab Research Team at NUCSER, NITTE" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="vision-lede">
+        <p>
+          At the <strong>Disease Engineering and Advanced RNA Biology (DEAR) Lab</strong>, based at NUCSER, NITTE (Deemed to be University), Karnataka, we seek to understand how RNA governs disease and harness this knowledge to engineer innovative solutions for cancer and other intractable diseases.
+        </p>
+        <p>
+          Our research sits at the intersection of RNA biology, cancer biology, mechanobiology, and bioengineering. We investigate the complex regulatory landscape of non-coding RNAs, including long non-coding RNAs (lncRNAs) and microRNAs, as well as their higher-order structures, interactions, and dynamic organization within cells. By deciphering how these RNA networks influence cellular identity, plasticity, and disease progression, we aim to uncover previously unrecognized vulnerabilities in cancer.
+        </p>
+        <p>
+          A key focus of our work is understanding how the physical microenvironment shapes RNA-mediated regulation of aggressive cancers. Using biomimetic 3D tumoroid models, we investigate how mechanical cues such as matrix stiffness and cellular forces reshape RNA programs and contribute to tumor progression, invasion, and therapy resistance, with a particular focus on glioblastoma.
+        </p>
+        <p>
+          We further integrate advanced RNA-sensing and bioengineering technologies to move from discovery to application &mdash; developing approaches that can detect, interrogate, and ultimately manipulate disease-associated RNA networks.
+        </p>
+        <p class="lede-close">
+          Our goal is to move from understanding RNA to engineering disease solutions.
+        </p>
 
-  <!-- Research Highlights Section -->
-  <section id="research" class="section section--alt reveal">
-    <div class="container">
-      <div class="section-header">
-        <span class="label">Research Areas</span>
-        <h2>Pioneering Discovery in RNA &amp; Disease Engineering</h2>
-        <div class="divider"></div>
-        <p>Investigating the regulatory mechanisms of non-coding RNAs, cell mechanics, quantum nanosensing, and innovative therapeutics.</p>
-      </div>
-
-      <div class="grid grid--3 stagger">
-        <!-- Area 1 -->
-        <div class="research-card">
-          <div class="research-card__icon">
-            <i class="fas fa-dna"></i>
-          </div>
-          <h3 class="research-card__title">lncRNA &amp; miRNA Biology</h3>
-          <p class="research-card__text">
-            Investigating G-quadruplex structures in long non-coding RNAs like MALAT1, delineating RNA-protein interactions with nucleolin and nucleophosmin, and developing targeted strategies against oncogenic miR-21.
-          </p>
-        </div>
-
-        <!-- Area 2 -->
-        <div class="research-card">
-          <div class="research-card__icon">
-            <i class="fas fa-compress-arrows-alt"></i>
-          </div>
-          <h3 class="research-card__title">Mechanosensing</h3>
-          <p class="research-card__text">
-            Unraveling how the lncRNA NEAT1 and nuclear paraspeckles dynamically respond to extracellular mechanical cues across soft versus stiff matrix substrates in glioblastoma cellular systems.
-          </p>
-        </div>
-
-        <!-- Area 3 -->
-        <div class="research-card">
-          <div class="research-card__icon">
-            <i class="fas fa-brain"></i>
-          </div>
-          <h3 class="research-card__title">Disease Modelling / GBM</h3>
-          <p class="research-card__text">
-            Engineering physiologically relevant 2D and 3D tumoroid platforms to dissect glioblastoma progression, invasion dynamics, and the phenotypic consequences of NEAT1 and MALAT1 dysregulation.
-          </p>
-        </div>
-
-        <!-- Area 4 -->
-        <div class="research-card">
-          <div class="research-card__icon">
-            <i class="fas fa-atom"></i>
-          </div>
-          <h3 class="research-card__title">RNA Sensing Technologies</h3>
-          <p class="research-card__text">
-            Employing nitrogen-vacancy (NV) center quantum sensors and fluorescent nanodiamonds for non-invasive, nanoscale real-time tracking of intracellular RNA dynamics, temperature, and biochemical fluctuations.
-          </p>
-        </div>
-
-        <!-- Area 5 -->
-        <div class="research-card">
-          <div class="research-card__icon">
-            <i class="fas fa-flask"></i>
-          </div>
-          <h3 class="research-card__title">Small Molecule Therapeutics</h3>
-          <p class="research-card__text">
-            Designing conformation-specific peptidic aminosugars, self-assembled branched DNA nanostructures, and PNA-based inhibitors to modulate RNA structural motifs and synergistically silence oncogenic pathways.
-          </p>
+        <div class="text-center mt-lg">
+          <a href="research.html" class="btn btn--primary">
+            Explore our Research Pillars <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
 
-      <div class="text-center mt-xl">
-        <a href="research.html" class="btn btn--primary">
-          Explore All Research Pillars <i class="fas fa-arrow-right"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats Bar -->
-  <section class="section section--dark reveal">
-    <div class="container">
-      <div class="stats-bar stagger">
-        <div class="stat-item">
-          <div class="stat-item__number" data-count="12" data-suffix="+">0</div>
-          <div class="stat-item__label">Publications</div>
+      <figure class="figure-wide">
+        <div class="figure-wide__frame" data-lightbox role="button" tabindex="0" aria-label="Enlarge the research overview figure">
+          <img src="assets/research-overview.jpg" alt="DEAR Lab research overview: RNA biology, mechanobiology, 3D tumoroid models and RNA-sensing and bioengineering converge on understanding RNA in disease, leading towards early diagnosis, targeted therapies, overcoming therapy resistance and improved patient outcomes." loading="lazy">
         </div>
-        <div class="stat-item">
-          <div class="stat-item__number" data-count="229" data-suffix="+">0</div>
-          <div class="stat-item__label">Citations</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-item__number" data-count="5" data-suffix="">0</div>
-          <div class="stat-item__label">Research Areas</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-item__number" data-count="10" data-suffix="+">0</div>
-          <div class="stat-item__label">Team Members</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Latest Publications Section -->
-  <section id="publications" class="section reveal">
-    <div class="container">
-      <div class="section-header">
-        <span class="label">Our Output</span>
-        <h2>Selected Publications</h2>
-        <div class="divider"></div>
-        <p>Featured scientific contributions published in leading international peer-reviewed journals.</p>
-      </div>
-
-      <div class="stagger" style="display: flex; flex-direction: column; gap: var(--space-md); max-width: 900px; margin: 0 auto;">
-        <!-- Paper 1 -->
-        <div class="pub-item">
-          <div class="pub-item__number">01</div>
-          <div class="pub-item__content">
-            <h3 class="pub-item__title">Identification of G-quadruplex structures in MALAT1 lncRNA that interact with nucleolin and nucleophosmin</h3>
-            <div class="pub-item__meta">
-              <span>A. Ghosh, S. P. Pandey, D. C. Joshi, P. Rana, A. H. Ansari, et al.</span>
-              <span>•</span>
-              <span><em>Nucleic Acids Research</em></span>
-              <span class="pub-item__year">2023</span>
-              <span class="pub-item__citations"><i class="fas fa-quote-right"></i> 52 citations</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Paper 2 -->
-        <div class="pub-item">
-          <div class="pub-item__number">02</div>
-          <div class="pub-item__content">
-            <h3 class="pub-item__title">The long noncoding RNA MALAT1 suppresses miR-211 to confer protection from ultraviolet-mediated DNA damage in vitiligo epidermis by upregulating sirtuin 1</h3>
-            <div class="pub-item__meta">
-              <span>H. D. Brahmbhatt, R. Gupta, A. Gupta, S. Rastogi, R. Misri, A. Mobeen, A. Ghosh, et al.</span>
-              <span>•</span>
-              <span><em>British Journal of Dermatology</em></span>
-              <span class="pub-item__year">2021</span>
-              <span class="pub-item__citations"><i class="fas fa-quote-right"></i> 43 citations</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Paper 3 -->
-        <div class="pub-item">
-          <div class="pub-item__number">03</div>
-          <div class="pub-item__content">
-            <h3 class="pub-item__title">Enhanced and synergistic downregulation of oncogenic miRNAs by self-assembled branched DNA</h3>
-            <div class="pub-item__meta">
-              <span>S. Nahar, A. K. Nayak, A. Ghosh, U. Subudhi, S. Maiti</span>
-              <span>•</span>
-              <span><em>Nanoscale</em></span>
-              <span class="pub-item__year">2018</span>
-              <span class="pub-item__citations"><i class="fas fa-quote-right"></i> 37 citations</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-center mt-xl">
-        <a href="publications.html" class="btn btn--primary">
-          View All Publications <i class="fas fa-arrow-right"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Join Us CTA Banner -->
-  <section class="section pt-0 reveal">
-    <div class="container">
-      <div class="cta-banner">
-        <h2>Join the DEAR Lab</h2>
-        <p>We are looking for motivated PhD students, postdocs, and research interns passionate about RNA biology and disease engineering.</p>
-        <a href="contact.html" class="btn btn--white">
-          Get in Touch <i class="fas fa-paper-plane"></i>
-        </a>
-      </div>
+        <figcaption>From understanding RNA in disease to engineering disease solutions &mdash; the DEAR Lab research framework.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -405,15 +228,13 @@
       <div class="footer-grid">
         <div class="footer-about">
           <div class="footer-brand">
-            <img src="assets/logo.jpg" alt="DEAR Lab">
+            <img src="assets/logo-mark-light.png" alt="DEAR Lab">
             <div class="footer-brand__text">DEAR Lab</div>
           </div>
           <p>Disease Engineering and Advanced RNA Biology Lab at NUCSER, NITTE (Deemed to be University), Karnataka, India.</p>
           <div class="footer-social">
-            <a href="https://scholar.google.com/citations?hl=en&user=tj6ck0kAAAAJ" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://www.linkedin.com/in/ag13031992/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://scholar.google.com/citations?hl=en&amp;user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            <a href="#" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
         <div>
@@ -430,7 +251,6 @@
           <ul class="footer-links">
             <li><a href="news.html">News</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
             <li><a href="https://nitte.edu.in/nucser/" target="_blank">NUCSER</a></li>
           </ul>
         </div>
@@ -438,20 +258,27 @@
           <h4>Contact</h4>
           <ul class="footer-links">
             <li><a href="mailto:arpita.ghosh@nitte.edu.in">arpita.ghosh@nitte.edu.in</a></li>
-            <li>NUCSER, NITTE University</li>
-            <li>Deralakatte, Mangalore</li>
-            <li>Karnataka 575018, India</li>
+            <li>Room no. 200, Level minus 1, NUCSER</li>
+            <li>Paneer Campus, Deralakatte</li>
+            <li>Mangalore, Karnataka 575018, India</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 DEAR Lab. All rights reserved.</p>
+        <p>&copy; 2026 DEAR Lab. All rights reserved.</p>
         <p>NITTE (Deemed to be University)</p>
       </div>
     </div>
   </footer>
 
+  <!-- Lightbox -->
+  <div class="lightbox">
+    <button class="lightbox__close" aria-label="Close image">&times;</button>
+    <img src="" alt="">
+  </div>
+
   <!-- Scripts -->
+  <script src="js/gallery.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

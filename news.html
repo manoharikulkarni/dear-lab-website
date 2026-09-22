@@ -7,6 +7,7 @@
   <title>News &amp; Updates | DEAR Lab — NITTE University</title>
 
   <!-- Google Fonts & Font Awesome -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -22,8 +23,9 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="container">
-      <a href="index.html" class="nav-brand">
-        <img src="assets/logo.jpg" alt="DEAR Lab" class="nav-logo">
+      <a href="index.html" class="nav-brand" aria-label="DEAR Lab home">
+        <img src="assets/logo-mark-light.png" alt="" class="nav-logo nav-logo--light" aria-hidden="true">
+        <img src="assets/logo-mark.png" alt="DEAR Lab" class="nav-logo nav-logo--dark">
         <div class="nav-logo-text">DEAR<span>lab</span></div>
       </a>
       <div class="nav-overlay"></div>
@@ -45,25 +47,16 @@
   <!-- Page Header -->
   <header class="page-header">
     <div class="container">
-      <h1 class="reveal">Lab News</h1>
-      <p class="reveal">Latest updates, publications, and events from the DEAR Lab</p>
+      <h1>Lab News</h1>
+      <p>Latest updates and events from DEAR Lab</p>
     </div>
   </header>
 
   <!-- Main Content -->
   <main>
-    <!-- Recent News Section -->
-    <section class="section">
+    <section class="section" style="padding-top: var(--space-xl);">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="label">Updates</span>
-          <h2>Recent News &amp; Highlights</h2>
-          <div class="divider"></div>
-          <p>Explore recent discoveries, journal publications, lab milestones, and team updates from our research group.</p>
-        </div>
-
         <div class="grid grid--3 stagger">
-          <!-- News Item 1 -->
           <article class="news-card">
             <div class="news-card__image" style="background: linear-gradient(135deg, #E8D5F0 0%, #D8C4E8 100%); color: #5B2D8E;">
               <i class="fas fa-newspaper" aria-hidden="true"></i>
@@ -71,160 +64,93 @@
             <div class="news-card__body">
               <span class="card__tag">Publication</span>
               <div class="news-card__date">
-                <i class="far fa-calendar-alt"></i> September 2024
+                <i class="far fa-calendar-alt"></i> April 2026
               </div>
-              <h3 class="news-card__title">New Paper Published: Mechano-sensing role of lncRNA NEAT1</h3>
-              <p class="news-card__excerpt">Our latest study on how substrate stiffness influences NEAT1 expression in GBM is now published.</p>
+              <h3 class="news-card__title">First DEAR Lab publication out in Macromolecular Bioscience</h3>
+              <p class="news-card__excerpt">The first publication from DEAR Lab, in collaboration with IIT Bombay and IISc Bangalore, is published in Wiley: <em>Macromolecular Bioscience</em>. Hooray!</p>
             </div>
           </article>
 
-          <!-- News Item 2 -->
           <article class="news-card">
             <div class="news-card__image" style="background: linear-gradient(135deg, #D5EFEA 0%, #B8E4DD 100%); color: #2A9D8F;">
-              <i class="fas fa-atom" aria-hidden="true"></i>
-            </div>
-            <div class="news-card__body">
-              <span class="card__tag">Research</span>
-              <div class="news-card__date">
-                <i class="far fa-calendar-alt"></i> August 2024
-              </div>
-              <h3 class="news-card__title">Quantum Sensing Paper in GBM Research</h3>
-              <p class="news-card__excerpt">Tracking chemotherapy-induced oxidative stress using NV-based quantum sensors — our interdisciplinary study bridging physics and cancer biology.</p>
-            </div>
-          </article>
-
-          <!-- News Item 3 -->
-          <article class="news-card">
-            <div class="news-card__image" style="background: linear-gradient(135deg, #F0EDF4 0%, #E2DAEB 100%); color: #5B2D8E;">
-              <i class="fas fa-users" aria-hidden="true"></i>
-            </div>
-            <div class="news-card__body">
-              <span class="card__tag">Team</span>
-              <div class="news-card__date">
-                <i class="far fa-calendar-alt"></i> July 2024
-              </div>
-              <h3 class="news-card__title">DEAR Lab Welcomes New PhD Scholars</h3>
-              <p class="news-card__excerpt">We are excited to welcome three new PhD scholars to the lab this academic year.</p>
-            </div>
-          </article>
-
-          <!-- News Item 4 -->
-          <article class="news-card">
-            <div class="news-card__image" style="background: linear-gradient(135deg, #E0E7EC 0%, #CAD7E2 100%); color: #1B3A4B;">
-              <i class="fas fa-microscope" aria-hidden="true"></i>
-            </div>
-            <div class="news-card__body">
-              <span class="card__tag">Publication</span>
-              <div class="news-card__date">
-                <i class="far fa-calendar-alt"></i> June 2024
-              </div>
-              <h3 class="news-card__title">3D Tumoroid Study Published</h3>
-              <p class="news-card__excerpt">Our comparative analysis of lncRNA expression in 2D vs 3D culture systems reveals critical insights for GBM progression.</p>
-            </div>
-          </article>
-
-          <!-- News Item 5 -->
-          <article class="news-card">
-            <div class="news-card__image" style="background: linear-gradient(135deg, #E8F4F1 0%, #D1E7DD 100%); color: #2A9D8F;">
               <i class="fas fa-award" aria-hidden="true"></i>
             </div>
             <div class="news-card__body">
               <span class="card__tag">Grant</span>
               <div class="news-card__date">
-                <i class="far fa-calendar-alt"></i> May 2024
+                <i class="far fa-calendar-alt"></i> April 2026
               </div>
-              <h3 class="news-card__title">Grant Awarded for RNA Sensing Project</h3>
-              <p class="news-card__excerpt">DEAR Lab receives funding to expand our quantum sensing program for cancer diagnostics.</p>
+              <h3 class="news-card__title">Six BSc Honours students receive NUSR Grants</h3>
+              <p class="news-card__excerpt">BSc Biomedical Science Honours students Jalisha, Vivechana, Shanelle, Sanjana, Prathiksha and Prerana each got their NUSR Grants. Kudos to all!</p>
             </div>
           </article>
 
-          <!-- News Item 6 -->
+          <article class="news-card">
+            <div class="news-card__image" style="background: linear-gradient(135deg, #F0EDF4 0%, #E2DAEB 100%); color: #5B2D8E;">
+              <i class="fas fa-university" aria-hidden="true"></i>
+            </div>
+            <div class="news-card__body">
+              <span class="card__tag">Grant</span>
+              <div class="news-card__date">
+                <i class="far fa-calendar-alt"></i> April 2026
+              </div>
+              <h3 class="news-card__title">First Intramural NUFR Grant awarded</h3>
+              <p class="news-card__excerpt">DEAR Lab got its first Intramural NUFR Grant, awarded by NITTE University. We are set to roll!</p>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-card__image" style="background: linear-gradient(135deg, #E0E7EC 0%, #CAD7E2 100%); color: #1B3A4B;">
+              <i class="fas fa-trophy" aria-hidden="true"></i>
+            </div>
+            <div class="news-card__body">
+              <span class="card__tag">Grant</span>
+              <div class="news-card__date">
+                <i class="far fa-calendar-alt"></i> April 2026
+              </div>
+              <h3 class="news-card__title">First Extramural Grant: ANRF Prime Minister Early Career Grant</h3>
+              <p class="news-card__excerpt">DEAR Lab gets its first extramural grant &mdash; the Prime Minister Early Career Research Grant, awarded by ANRF for three years.</p>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-card__image" style="background: linear-gradient(135deg, #E8F4F1 0%, #D1E7DD 100%); color: #2A9D8F;">
+              <i class="fas fa-user-plus" aria-hidden="true"></i>
+            </div>
+            <div class="news-card__body">
+              <span class="card__tag">Team</span>
+              <div class="news-card__date">
+                <i class="far fa-calendar-alt"></i> July 2026
+              </div>
+              <h3 class="news-card__title">Welcome to our first JRF, Ashish Soman Yogesh</h3>
+              <p class="news-card__excerpt">DEAR Lab welcomes its first JRF student, Ashish Soman Yogesh, as Project Associate-I under the ANRF-PMECRG project. Welcome Ashish!</p>
+            </div>
+          </article>
+
           <article class="news-card">
             <div class="news-card__image" style="background: linear-gradient(135deg, #EDE5F5 0%, #DDD0ED 100%); color: #7B4DAE;">
-              <i class="fas fa-mountain" aria-hidden="true"></i>
+              <i class="fas fa-microphone-lines" aria-hidden="true"></i>
             </div>
             <div class="news-card__body">
               <span class="card__tag">Event</span>
               <div class="news-card__date">
-                <i class="far fa-calendar-alt"></i> April 2024
+                <i class="far fa-calendar-alt"></i> August 2026
               </div>
-              <h3 class="news-card__title">Lab Retreat 2024</h3>
-              <p class="news-card__excerpt">The annual DEAR Lab retreat at NITTE campus — team building, science discussions, and planning for the year ahead.</p>
+              <h3 class="news-card__title">Invited talk at the National Conference on Quantum Biotechnology, IIT Bombay</h3>
+              <p class="news-card__excerpt">Arpita is invited as a speaker for the National Conference on Quantum Biotechnology at IIT Bombay. She delivers her talk on &ldquo;From Fixed Footprints to Live Folds: NV-Centre Quantum Sensing of Oxidative Damage and RNA Structural Plasticity in Glioblastoma&rdquo;.</p>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- Past Newsletters Section -->
-    <section class="section section--alt reveal">
-      <div class="container container--narrow">
-        <div class="section-header">
-          <span class="label">Archive</span>
-          <h2>Past Newsletters</h2>
-          <div class="divider"></div>
-          <p>Read our quarterly digests highlighting major lab achievements, newly published preprints, events, and scientific outreach.</p>
-        </div>
-
-        <div class="newsletter-list">
-          <!-- Newsletter Item 1 -->
-          <div class="newsletter-item">
-            <div class="newsletter-item__icon">
-              <i class="fas fa-envelope" aria-hidden="true"></i>
+          <article class="news-card">
+            <div class="news-card__image" style="background: linear-gradient(135deg, #E8D5F0 0%, #CBDDF0 100%); color: #5B2D8E;">
+              <i class="fas fa-users" aria-hidden="true"></i>
             </div>
-            <div style="flex: 1;">
-              <h3 class="newsletter-item__title">DEAR Lab Newsletter — Q3 2024</h3>
-              <div class="newsletter-item__date">
-                <i class="far fa-calendar-alt"></i> September 2024
-              </div>
+            <div class="news-card__body">
+              <span class="card__tag">Team</span>
+              <h3 class="news-card__title">DEAR Lab welcomes its one-year Master&rsquo;s students</h3>
+              <p class="news-card__excerpt">Davika and Teertha from MSc Cancer Biology and Siddhanth from Biotechnology join the lab. Welcome to DEAR Lab!</p>
             </div>
-            <a href="#" class="btn btn--outline btn--sm" aria-label="Read DEAR Lab Newsletter Q3 2024">
-              <i class="fas fa-arrow-up-right-from-square"></i> Read Digest
-            </a>
-          </div>
-
-          <!-- Newsletter Item 2 -->
-          <div class="newsletter-item">
-            <div class="newsletter-item__icon">
-              <i class="fas fa-envelope" aria-hidden="true"></i>
-            </div>
-            <div style="flex: 1;">
-              <h3 class="newsletter-item__title">DEAR Lab Newsletter — Q2 2024</h3>
-              <div class="newsletter-item__date">
-                <i class="far fa-calendar-alt"></i> June 2024
-              </div>
-            </div>
-            <a href="#" class="btn btn--outline btn--sm" aria-label="Read DEAR Lab Newsletter Q2 2024">
-              <i class="fas fa-arrow-up-right-from-square"></i> Read Digest
-            </a>
-          </div>
-
-          <!-- Newsletter Item 3 -->
-          <div class="newsletter-item">
-            <div class="newsletter-item__icon">
-              <i class="fas fa-envelope" aria-hidden="true"></i>
-            </div>
-            <div style="flex: 1;">
-              <h3 class="newsletter-item__title">DEAR Lab Newsletter — Q1 2024</h3>
-              <div class="newsletter-item__date">
-                <i class="far fa-calendar-alt"></i> March 2024
-              </div>
-            </div>
-            <a href="#" class="btn btn--outline btn--sm" aria-label="Read DEAR Lab Newsletter Q1 2024">
-              <i class="fas fa-arrow-up-right-from-square"></i> Read Digest
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="section pt-0 reveal">
-      <div class="container">
-        <div class="cta-banner">
-          <h2>Stay Connected with DEAR Lab</h2>
-          <p>Interested in collaborative research, prospective graduate positions, or scientific inquiries? We would love to hear from you.</p>
-          <a href="contact.html" class="btn btn--white">Contact Us</a>
+          </article>
         </div>
       </div>
     </section>
@@ -236,15 +162,13 @@
       <div class="footer-grid">
         <div class="footer-about">
           <div class="footer-brand">
-            <img src="assets/logo.jpg" alt="DEAR Lab">
+            <img src="assets/logo-mark-light.png" alt="DEAR Lab">
             <div class="footer-brand__text">DEAR Lab</div>
           </div>
           <p>Disease Engineering and Advanced RNA Biology Lab at NUCSER, NITTE (Deemed to be University), Karnataka, India.</p>
           <div class="footer-social">
-            <a href="https://scholar.google.com/citations?hl=en&user=tj6ck0kAAAAJ" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://www.linkedin.com/in/ag13031992/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://scholar.google.com/citations?hl=en&amp;user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            <a href="#" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
         <div>
@@ -261,7 +185,6 @@
           <ul class="footer-links">
             <li><a href="news.html">News</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
             <li><a href="https://nitte.edu.in/nucser/" target="_blank">NUCSER</a></li>
           </ul>
         </div>
@@ -269,14 +192,14 @@
           <h4>Contact</h4>
           <ul class="footer-links">
             <li><a href="mailto:arpita.ghosh@nitte.edu.in">arpita.ghosh@nitte.edu.in</a></li>
-            <li>NUCSER, NITTE University</li>
-            <li>Deralakatte, Mangalore</li>
-            <li>Karnataka 575018, India</li>
+            <li>Room no. 200, Level minus 1, NUCSER</li>
+            <li>Paneer Campus, Deralakatte</li>
+            <li>Mangalore, Karnataka 575018, India</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 DEAR Lab. All rights reserved.</p>
+        <p>&copy; 2026 DEAR Lab. All rights reserved.</p>
         <p>NITTE (Deemed to be University)</p>
       </div>
     </div>

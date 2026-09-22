@@ -10,7 +10,7 @@ function initLightbox() {
   const lightbox = document.querySelector('.lightbox');
   const lightboxImg = lightbox?.querySelector('img');
   const lightboxClose = lightbox?.querySelector('.lightbox__close');
-  const galleryItems = document.querySelectorAll('.gallery-item');
+  const galleryItems = document.querySelectorAll('.gallery-item, [data-lightbox]');
 
   if (!lightbox || !lightboxImg || !galleryItems.length) return;
 

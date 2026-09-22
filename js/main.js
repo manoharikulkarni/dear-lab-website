@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initSmoothScroll();
   initCountUp();
+  initMemberModal();
 });
 
 /* --- Navbar scroll behavior --- */
@@ -157,6 +158,67 @@ function animateCount(el) {
       el.textContent = prefix + Math.floor(current) + suffix;
     }
   }, 16);
+}
+
+/* --- Team member profile modal --- */
+function initMemberModal() {
+  const modal = document.querySelector('.member-modal');
+  const cards = document.querySelectorAll('[data-member]');
+
+  if (!modal || !cards.length) return;
+
+  const panel = modal.querySelector('.member-modal__panel');
+  const avatar = modal.querySelector('.member-modal__avatar');
+  const nameEl = modal.querySelector('.member-modal__name');
+  const roleEl = modal.querySelector('.member-modal__role');
+  const bioEl = modal.querySelector('.member-modal__bio');
+  const closeBtn = modal.querySelector('.member-modal__close');
+  let lastFocused = null;
+
+  function openModal(card) {
+    lastFocused = card;
+    const name = card.dataset.name || '';
+    const role = card.dataset.role || '';
+    const bio = card.dataset.bio || '';
+    const initials = card.dataset.initials || name.slice(0, 2).toUpperCase();
+    const accent = card.dataset.accent || 'linear-gradient(135deg, #5B2D8E, #2A9D8F)';
+
+    nameEl.textContent = name;
+    roleEl.textContent = role;
+    bioEl.textContent = bio;
+    avatar.textContent = initials;
+    avatar.style.background = accent;
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  }
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => openModal(card));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal(card);
+      }
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (!panel.contains(e.target)) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+  });
 }
 
 /* --- Active nav link highlighting --- */

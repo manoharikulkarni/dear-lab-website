@@ -7,6 +7,7 @@
   <title>Team | DEAR Lab — Disease Engineering &amp; Advanced RNA Biology</title>
 
   <!-- Google Fonts -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,8 +25,9 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="container">
-      <a href="index.html" class="nav-brand">
-        <img src="assets/logo.jpg" alt="DEAR Lab" class="nav-logo">
+      <a href="index.html" class="nav-brand" aria-label="DEAR Lab home">
+        <img src="assets/logo-mark-light.png" alt="" class="nav-logo nav-logo--light" aria-hidden="true">
+        <img src="assets/logo-mark.png" alt="DEAR Lab" class="nav-logo nav-logo--dark">
         <div class="nav-logo-text">DEAR<span>lab</span></div>
       </a>
       <div class="nav-overlay"></div>
@@ -48,18 +50,30 @@
   <header class="page-header">
     <div class="container">
       <h1>Our Team</h1>
-      <p>Meet the researchers driving innovation in RNA biology and disease engineering</p>
+      <p>Meet the RNA Biologists</p>
     </div>
   </header>
 
-  <!-- Principal Investigator Section -->
-  <section class="section reveal">
+  <!-- Lab Group Photo -->
+  <section class="section reveal" style="padding-bottom: var(--space-xl);">
+    <div class="container">
+      <figure class="figure-wide" style="margin-top: 0;">
+        <div class="figure-wide__frame">
+          <img src="assets/team-photo.jpg" alt="The DEAR Lab team at NUCSER, NITTE (Deemed to be University)" style="max-height: 560px; object-fit: cover;">
+        </div>
+        <figcaption>DEAR Lab, NUCSER, NITTE (Deemed to be University)</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Principal Investigator -->
+  <section class="section section--alt reveal" style="padding-top: var(--space-xl);">
     <div class="container">
       <div class="section-header">
-        <span class="label">Leadership</span>
         <h2>Principal Investigator</h2>
         <div class="divider"></div>
       </div>
+
       <div class="pi-card">
         <div class="pi-card__photo" style="background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary)); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 4rem; font-family: var(--font-heading); font-weight: 700; aspect-ratio: 3/4; width: 100%; border-radius: var(--border-radius); box-shadow: var(--shadow-sm);">
           AG
@@ -71,14 +85,11 @@
             <i class="fas fa-university" style="color: var(--clr-primary); margin-right: 6px;"></i> NUCSER, NITTE (Deemed to be University), Karnataka, India
           </p>
           <p class="pi-card__bio">
-            Dr. Arpita Ghosh leads the Disease Engineering and Advanced RNA Biology (DEAR) Lab, focusing on understanding the roles of long non-coding RNAs and microRNAs in cancer biology, with a special emphasis on glioblastoma. Her research integrates mechanobiology, quantum sensing technologies, and small molecule therapeutics to develop novel approaches for disease understanding and treatment. With expertise spanning G-quadruplex RNA structures, miRNA biogenesis modulation, and 3D tumor modeling, her lab bridges fundamental RNA biology with translational disease engineering.
+            Dr. Arpita Ghosh leads the Disease Engineering and Advanced RNA Biology (DEAR) Lab, working at the intersection of RNA biology, cancer biology, mechanobiology, and bioengineering. Her group studies long non-coding RNAs, microRNAs and higher-order RNA structures, and how these regulatory systems respond to the physical tumour microenvironment in aggressive cancers such as glioblastoma.
           </p>
           <div class="pi-card__links">
-            <a href="https://scholar.google.com/citations?hl=en&user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+            <a href="https://scholar.google.com/citations?hl=en&amp;user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
               <i class="fas fa-graduation-cap"></i> Google Scholar
-            </a>
-            <a href="https://www.linkedin.com/in/ag13031992/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
-              <i class="fab fa-linkedin-in"></i> LinkedIn
             </a>
             <a href="https://nitte.edu.in/nucser/people-nucser.php" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
               <i class="fas fa-external-link-alt"></i> NITTE Profile
@@ -86,250 +97,293 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Current Members Section -->
-  <section class="section section--alt reveal">
-    <div class="container">
-      <div class="section-header">
-        <span class="label">Research Group</span>
-        <h2>Current Members</h2>
-        <div class="divider"></div>
-        <p>A multidisciplinary team of doctoral scholars, research fellows, and trainees exploring cutting-edge RNA technologies.</p>
-      </div>
-
-      <div class="grid grid--4 stagger">
-        <!-- PhD Scholar 1 -->
-        <div class="team-card">
-          <div class="team-card__photo" style="background: linear-gradient(135deg, #5B2D8E, #7B4DAE); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
-            PS1
-          </div>
-          <div class="team-card__info">
-            <h3 class="team-card__name">PhD Scholar 1</h3>
-            <p class="team-card__role">PhD Scholar — RNA Mechanobiology</p>
-            <div class="team-card__links">
-              <a href="mailto:arpita.ghosh@nitte.edu.in" title="Email"><i class="fas fa-envelope"></i></a>
-              <a href="https://www.linkedin.com/in/ag13031992/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://scholar.google.com/citations?hl=en&user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- PhD Scholar 2 -->
-        <div class="team-card">
-          <div class="team-card__photo" style="background: linear-gradient(135deg, #1B3A4B, #2A9D8F); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
-            PS2
-          </div>
-          <div class="team-card__info">
-            <h3 class="team-card__name">PhD Scholar 2</h3>
-            <p class="team-card__role">PhD Scholar — lncRNA &amp; GBM</p>
-            <div class="team-card__links">
-              <a href="mailto:arpita.ghosh@nitte.edu.in" title="Email"><i class="fas fa-envelope"></i></a>
-              <a href="https://www.linkedin.com/in/ag13031992/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://scholar.google.com/citations?hl=en&user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- PhD Scholar 3 -->
-        <div class="team-card">
-          <div class="team-card__photo" style="background: linear-gradient(135deg, #3E1D63, #9B6B9E); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
-            PS3
-          </div>
-          <div class="team-card__info">
-            <h3 class="team-card__name">PhD Scholar 3</h3>
-            <p class="team-card__role">PhD Scholar — Quantum Sensing</p>
-            <div class="team-card__links">
-              <a href="mailto:arpita.ghosh@nitte.edu.in" title="Email"><i class="fas fa-envelope"></i></a>
-              <a href="https://www.linkedin.com/in/ag13031992/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://scholar.google.com/citations?hl=en&user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Research Intern 1 -->
-        <div class="team-card">
-          <div class="team-card__photo" style="background: linear-gradient(135deg, #2A9D8F, #4DC4B6); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
-            RI1
-          </div>
-          <div class="team-card__info">
-            <h3 class="team-card__name">Research Intern 1</h3>
-            <p class="team-card__role">Research Intern — Disease Modelling</p>
-            <div class="team-card__links">
-              <a href="mailto:arpita.ghosh@nitte.edu.in" title="Email"><i class="fas fa-envelope"></i></a>
-              <a href="https://www.linkedin.com/in/ag13031992/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://scholar.google.com/citations?hl=en&user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Research Intern 2 -->
-        <div class="team-card">
-          <div class="team-card__photo" style="background: linear-gradient(135deg, #9B6B9E, #5B2D8E); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
-            RI2
-          </div>
-          <div class="team-card__info">
-            <h3 class="team-card__name">Research Intern 2</h3>
-            <p class="team-card__role">Research Intern — Small Molecule Therapeutics</p>
-            <div class="team-card__links">
-              <a href="mailto:arpita.ghosh@nitte.edu.in" title="Email"><i class="fas fa-envelope"></i></a>
-              <a href="https://www.linkedin.com/in/ag13031992/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://scholar.google.com/citations?hl=en&user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- MSc Student 1 -->
-        <div class="team-card">
-          <div class="team-card__photo" style="background: linear-gradient(135deg, #16213E, #1B3A4B); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
-            MS1
-          </div>
-          <div class="team-card__info">
-            <h3 class="team-card__name">MSc Student 1</h3>
-            <p class="team-card__role">MSc Student — Molecular Oncology</p>
-            <div class="team-card__links">
-              <a href="mailto:arpita.ghosh@nitte.edu.in" title="Email"><i class="fas fa-envelope"></i></a>
-              <a href="https://www.linkedin.com/in/ag13031992/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://scholar.google.com/citations?hl=en&user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- MSc Student 2 -->
-        <div class="team-card">
-          <div class="team-card__photo" style="background: linear-gradient(135deg, #5B2D8E, #2A9D8F); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
-            MS2
-          </div>
-          <div class="team-card__info">
-            <h3 class="team-card__name">MSc Student 2</h3>
-            <p class="team-card__role">MSc Student — RNA Biochemistry</p>
-            <div class="team-card__links">
-              <a href="mailto:arpita.ghosh@nitte.edu.in" title="Email"><i class="fas fa-envelope"></i></a>
-              <a href="https://www.linkedin.com/in/ag13031992/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://scholar.google.com/citations?hl=en&user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Lab Technician -->
-        <div class="team-card">
-          <div class="team-card__photo" style="background: linear-gradient(135deg, #1B3A4B, #9B6B9E); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
-            LT
-          </div>
-          <div class="team-card__info">
-            <h3 class="team-card__name">Lab Technician</h3>
-            <p class="team-card__role">Lab Technician — Operations &amp; Support</p>
-            <div class="team-card__links">
-              <a href="mailto:arpita.ghosh@nitte.edu.in" title="Email"><i class="fas fa-envelope"></i></a>
-              <a href="https://www.linkedin.com/in/ag13031992/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://scholar.google.com/citations?hl=en&user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Team Photo Section -->
-  <section class="section reveal">
-    <div class="container">
-      <div class="section-header">
-        <span class="label">Life at DEAR Lab</span>
-        <h2>Our Research Group</h2>
-        <div class="divider"></div>
-        <p>Working together at NUCSER, NITTE University to engineer next-generation solutions for human disease.</p>
-      </div>
-
-      <div style="max-width: 1000px; margin: 0 auto;">
-        <div style="border-radius: var(--border-radius-lg); overflow: hidden; box-shadow: var(--shadow-xl); border: 1px solid var(--clr-border);">
-          <img src="assets/team-photo.jpg" alt="DEAR Lab Team, NUCSER, NITTE University" style="width: 100%; height: auto; max-height: 550px; object-fit: cover; display: block;">
-        </div>
-        <p style="text-align: center; margin-top: var(--space-md); font-size: 1rem; color: var(--clr-text-light); font-style: italic;">
-          DEAR Lab Team, NUCSER, NITTE University
+      <div class="pi-bio">
+        <h3 style="margin-bottom: var(--space-md);">About the PI</h3>
+        <p>
+          Dr. Arpita Ghosh hails from Kolkata, the City of Joy, in eastern India. Her scientific journey has been driven by a deep curiosity about how molecular systems work and how fundamental discoveries can be translated into solutions for human disease.
+        </p>
+        <p>
+          She began her academic journey with a B.Tech.&ndash;M.Tech. dual degree in Biotechnology from KIIT University, Odisha, followed by a Ph.D. in Biological Sciences from CSIR&ndash;Institute of Genomics and Integrative Biology (IGIB), New Delhi, where she discovered the fascinating world of RNA biology and its structural and functional possibilities. She subsequently pursued postdoctoral research in the Department of Chemical Engineering at IIT Bombay, first as an Institute Postdoctoral Fellow and later as an ANRF National Postdoctoral Fellow, working at the intersection of RNA biology, cancer, mechanobiology, and disease engineering.
+        </p>
+        <p>
+          Today, as an independent researcher and PI, she leads the Disease Engineering and Advanced RNA Biology (DEAR) Lab at NUCSER, NITTE, built around a central question:
+        </p>
+        <p class="pi-bio__question">
+          Can we understand RNA deeply enough to engineer better solutions for cancer?
+        </p>
+        <p>
+          Her research explores long non-coding RNAs, microRNAs, RNA structures and higher-order RNA organization, and how these regulatory systems respond to the physical tumour microenvironment. Her work integrates RNA biology, mechanobiology, 3D tumour models, advanced sensing technologies, and therapeutic approaches to uncover mechanisms of cancer progression and therapy resistance.
+        </p>
+        <p>
+          Dr. Ghosh is an awardee of several prestigious national and international recognitions and has presented her research at scientific forums across different parts of the world.
+        </p>
+        <p>
+          Away from the laboratory, Arpita finds joy in music, dance, visual storytelling, and science communication. She loves telling stories &mdash; whether through a scientific figure, a research talk, a camera, or simply sharing the everyday journey of being a scientist. For her, creativity and science are not two separate worlds; both begin with curiosity, imagination, and the courage to ask questions.
+        </p>
+        <p class="lede-close">
+          And that spirit of curiosity is at the heart of DEAR Lab.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Alumni Section -->
-  <section class="section section--alt reveal">
+  <!-- Current Members -->
+  <section class="section reveal">
     <div class="container">
       <div class="section-header">
-        <span class="label">Past Members</span>
-        <h2>Alumni</h2>
+        <h2>Current Members</h2>
         <div class="divider"></div>
-        <p>Recognizing the contributions and achievements of scholars and researchers who have trained with us.</p>
       </div>
 
       <div class="grid grid--4 stagger">
-        <div class="collab-card">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-xs);">
-            <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--clr-accent-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;">
-              <i class="fas fa-user-graduate"></i>
-            </div>
-            <div>
-              <div class="collab-card__name">Alumnus Scholar 1</div>
-              <div style="font-size: 0.8rem; color: var(--clr-teal); font-weight: 600;">MSc Researcher (2023)</div>
-            </div>
+        <div class="team-card team-card--link" role="button" tabindex="0"
+             data-member
+             data-name="Ashish Soman Yogesh"
+             data-role="Project Associate-I — ANRF-PMECRG Project"
+             data-initials="AS"
+             data-accent="linear-gradient(135deg, #5B2D8E, #7B4DAE)"
+             data-bio="Profile write-up coming soon."
+             aria-label="Read the profile of Ashish Soman Yogesh">
+          <div class="team-card__photo" style="background: linear-gradient(135deg, #5B2D8E, #7B4DAE); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
+            AS
           </div>
-          <p class="collab-card__affiliation" style="margin-bottom: 0;">Now PhD Fellow, Indian Institute of Science (IISc)</p>
+          <div class="team-card__info">
+            <h3 class="team-card__name">Ashish Soman Yogesh</h3>
+            <p class="team-card__role">Project Associate-I &mdash; ANRF-PMECRG Project</p>
+            <span class="team-card__hint"><i class="fas fa-arrow-right"></i> Read profile</span>
+          </div>
         </div>
 
-        <div class="collab-card">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-xs);">
-            <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--clr-accent-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;">
-              <i class="fas fa-user-graduate"></i>
-            </div>
-            <div>
-              <div class="collab-card__name">Alumnus Scholar 2</div>
-              <div style="font-size: 0.8rem; color: var(--clr-teal); font-weight: 600;">Research Intern (2023)</div>
-            </div>
+        <div class="team-card team-card--link" role="button" tabindex="0"
+             data-member
+             data-name="Davika"
+             data-role="MSc Cancer Biology — 1-Year Project Student"
+             data-initials="DA"
+             data-accent="linear-gradient(135deg, #1B3A4B, #2A9D8F)"
+             data-bio="Profile write-up coming soon."
+             aria-label="Read the profile of Davika">
+          <div class="team-card__photo" style="background: linear-gradient(135deg, #1B3A4B, #2A9D8F); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
+            DA
           </div>
-          <p class="collab-card__affiliation" style="margin-bottom: 0;">Now Junior Research Fellow, NCBS Bangalore</p>
+          <div class="team-card__info">
+            <h3 class="team-card__name">Davika</h3>
+            <p class="team-card__role">MSc Cancer Biology &mdash; 1-Year Project Student</p>
+            <span class="team-card__hint"><i class="fas fa-arrow-right"></i> Read profile</span>
+          </div>
         </div>
 
-        <div class="collab-card">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-xs);">
-            <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--clr-accent-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;">
-              <i class="fas fa-user-graduate"></i>
-            </div>
-            <div>
-              <div class="collab-card__name">Alumnus Scholar 3</div>
-              <div style="font-size: 0.8rem; color: var(--clr-teal); font-weight: 600;">Project Assistant (2022)</div>
-            </div>
+        <div class="team-card team-card--link" role="button" tabindex="0"
+             data-member
+             data-name="Teertha"
+             data-role="MSc Cancer Biology — 1-Year Project Student"
+             data-initials="TE"
+             data-accent="linear-gradient(135deg, #3E1D63, #9B6B9E)"
+             data-bio="Profile write-up coming soon."
+             aria-label="Read the profile of Teertha">
+          <div class="team-card__photo" style="background: linear-gradient(135deg, #3E1D63, #9B6B9E); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
+            TE
           </div>
-          <p class="collab-card__affiliation" style="margin-bottom: 0;">Now Scientific Associate, Biocon Biologics</p>
+          <div class="team-card__info">
+            <h3 class="team-card__name">Teertha</h3>
+            <p class="team-card__role">MSc Cancer Biology &mdash; 1-Year Project Student</p>
+            <span class="team-card__hint"><i class="fas fa-arrow-right"></i> Read profile</span>
+          </div>
         </div>
 
-        <div class="collab-card">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-xs);">
-            <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--clr-accent-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;">
-              <i class="fas fa-user-graduate"></i>
-            </div>
-            <div>
-              <div class="collab-card__name">Alumnus Scholar 4</div>
-              <div style="font-size: 0.8rem; color: var(--clr-teal); font-weight: 600;">MSc Project Trainee (2022)</div>
-            </div>
+        <div class="team-card team-card--link" role="button" tabindex="0"
+             data-member
+             data-name="Siddhanth"
+             data-role="MSc Biotechnology — 1-Year Project Student"
+             data-initials="SI"
+             data-accent="linear-gradient(135deg, #2A9D8F, #4DC4B6)"
+             data-bio="Profile write-up coming soon."
+             aria-label="Read the profile of Siddhanth">
+          <div class="team-card__photo" style="background: linear-gradient(135deg, #2A9D8F, #4DC4B6); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
+            SI
           </div>
-          <p class="collab-card__affiliation" style="margin-bottom: 0;">Now Graduate Scholar, Technical University of Munich (TUM)</p>
+          <div class="team-card__info">
+            <h3 class="team-card__name">Siddhanth</h3>
+            <p class="team-card__role">MSc Biotechnology &mdash; 1-Year Project Student</p>
+            <span class="team-card__hint"><i class="fas fa-arrow-right"></i> Read profile</span>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Join Us CTA Banner -->
-  <section class="section reveal">
-    <div class="container">
-      <div class="cta-banner">
-        <h2>Join Our Research Group</h2>
-        <p>We are always seeking enthusiastic, highly driven PhD candidates, postdocs, and research interns passionate about RNA biology, mechanosensing, and disease engineering.</p>
-        <a href="contact.html" class="btn btn--white">
-          Get in Touch <i class="fas fa-arrow-right"></i>
+        <div class="team-card team-card--link" role="button" tabindex="0"
+             data-member
+             data-name="Jalisha"
+             data-role="BSc Biomedical Science (Hons) — NUSR Scholar"
+             data-initials="JA"
+             data-accent="linear-gradient(135deg, #9B6B9E, #5B2D8E)"
+             data-bio="Profile write-up coming soon."
+             aria-label="Read the profile of Jalisha">
+          <div class="team-card__photo" style="background: linear-gradient(135deg, #9B6B9E, #5B2D8E); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
+            JA
+          </div>
+          <div class="team-card__info">
+            <h3 class="team-card__name">Jalisha</h3>
+            <p class="team-card__role">BSc Biomedical Science (Hons) &mdash; NUSR Scholar</p>
+            <span class="team-card__hint"><i class="fas fa-arrow-right"></i> Read profile</span>
+          </div>
+        </div>
+
+        <div class="team-card team-card--link" role="button" tabindex="0"
+             data-member
+             data-name="Vivechana"
+             data-role="BSc Biomedical Science (Hons) — NUSR Scholar"
+             data-initials="VI"
+             data-accent="linear-gradient(135deg, #16213E, #1B3A4B)"
+             data-bio="Profile write-up coming soon."
+             aria-label="Read the profile of Vivechana">
+          <div class="team-card__photo" style="background: linear-gradient(135deg, #16213E, #1B3A4B); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
+            VI
+          </div>
+          <div class="team-card__info">
+            <h3 class="team-card__name">Vivechana</h3>
+            <p class="team-card__role">BSc Biomedical Science (Hons) &mdash; NUSR Scholar</p>
+            <span class="team-card__hint"><i class="fas fa-arrow-right"></i> Read profile</span>
+          </div>
+        </div>
+
+        <div class="team-card team-card--link" role="button" tabindex="0"
+             data-member
+             data-name="Shanelle"
+             data-role="BSc Biomedical Science (Hons) — NUSR Scholar"
+             data-initials="SH"
+             data-accent="linear-gradient(135deg, #5B2D8E, #2A9D8F)"
+             data-bio="Profile write-up coming soon."
+             aria-label="Read the profile of Shanelle">
+          <div class="team-card__photo" style="background: linear-gradient(135deg, #5B2D8E, #2A9D8F); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
+            SH
+          </div>
+          <div class="team-card__info">
+            <h3 class="team-card__name">Shanelle</h3>
+            <p class="team-card__role">BSc Biomedical Science (Hons) &mdash; NUSR Scholar</p>
+            <span class="team-card__hint"><i class="fas fa-arrow-right"></i> Read profile</span>
+          </div>
+        </div>
+
+        <div class="team-card team-card--link" role="button" tabindex="0"
+             data-member
+             data-name="Sanjana"
+             data-role="BSc Biomedical Science (Hons) — NUSR Scholar"
+             data-initials="SA"
+             data-accent="linear-gradient(135deg, #1B3A4B, #9B6B9E)"
+             data-bio="Profile write-up coming soon."
+             aria-label="Read the profile of Sanjana">
+          <div class="team-card__photo" style="background: linear-gradient(135deg, #1B3A4B, #9B6B9E); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
+            SA
+          </div>
+          <div class="team-card__info">
+            <h3 class="team-card__name">Sanjana</h3>
+            <p class="team-card__role">BSc Biomedical Science (Hons) &mdash; NUSR Scholar</p>
+            <span class="team-card__hint"><i class="fas fa-arrow-right"></i> Read profile</span>
+          </div>
+        </div>
+
+        <div class="team-card team-card--link" role="button" tabindex="0"
+             data-member
+             data-name="Prathiksha"
+             data-role="BSc Biomedical Science (Hons) — NUSR Scholar"
+             data-initials="PR"
+             data-accent="linear-gradient(135deg, #3E1D63, #2A9D8F)"
+             data-bio="Profile write-up coming soon."
+             aria-label="Read the profile of Prathiksha">
+          <div class="team-card__photo" style="background: linear-gradient(135deg, #3E1D63, #2A9D8F); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
+            PR
+          </div>
+          <div class="team-card__info">
+            <h3 class="team-card__name">Prathiksha</h3>
+            <p class="team-card__role">BSc Biomedical Science (Hons) &mdash; NUSR Scholar</p>
+            <span class="team-card__hint"><i class="fas fa-arrow-right"></i> Read profile</span>
+          </div>
+        </div>
+
+        <div class="team-card team-card--link" role="button" tabindex="0"
+             data-member
+             data-name="Prerana"
+             data-role="BSc Biomedical Science (Hons) — NUSR Scholar"
+             data-initials="PE"
+             data-accent="linear-gradient(135deg, #7B4DAE, #4DC4B6)"
+             data-bio="Profile write-up coming soon."
+             aria-label="Read the profile of Prerana">
+          <div class="team-card__photo" style="background: linear-gradient(135deg, #7B4DAE, #4DC4B6); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700;">
+            PE
+          </div>
+          <div class="team-card__info">
+            <h3 class="team-card__name">Prerana</h3>
+            <p class="team-card__role">BSc Biomedical Science (Hons) &mdash; NUSR Scholar</p>
+            <span class="team-card__hint"><i class="fas fa-arrow-right"></i> Read profile</span>
+          </div>
+        </div>
+
+        <a href="#join-dear-lab" class="team-card team-card--ghost">
+          <i class="fas fa-user-plus" aria-hidden="true"></i>
+          <span class="team-card--ghost__title">This could be you</span>
+          <p class="team-card--ghost__text">We are looking for curious, driven researchers. See how to join the lab.</p>
         </a>
       </div>
     </div>
   </section>
+
+  <!-- Alumni -->
+  <section class="section section--alt reveal">
+    <div class="container">
+      <div class="section-header">
+        <h2>Alumni</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="empty-state" style="max-width: 760px; margin: 0 auto;">
+        <i class="fas fa-user-graduate" aria-hidden="true"></i>
+        <p>Our alumni will be listed here soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join DEAR Lab -->
+  <section class="section reveal" id="join-dear-lab">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Opportunities</span>
+        <h2>Join DEAR Lab</h2>
+        <div class="divider"></div>
+        <p>We are always looking for enthusiastic, curious, and driven researchers to join our team.</p>
+      </div>
+
+      <ul class="join-list stagger">
+        <li>
+          <i class="fas fa-user-graduate" aria-hidden="true"></i>
+          <span>Ph.D. positions are available biannually as per NUCSER guidelines. Interested candidates are welcome to contact us for an informal discussion.</span>
+        </li>
+        <li>
+          <i class="fas fa-flask" aria-hidden="true"></i>
+          <span>We are currently accepting applications for 2- and 6-month internships and postdoctoral positions.</span>
+        </li>
+        <li>
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <span>Interested candidates may email <a href="mailto:arpita.ghosh@nitte.edu.in">arpita.ghosh@nitte.edu.in</a> with a CV and letter of intent.</span>
+        </li>
+      </ul>
+
+      <div class="text-center mt-lg">
+        <a href="mailto:arpita.ghosh@nitte.edu.in?subject=Application%20for%20DEAR%20Lab%20Position" class="btn btn--primary">
+          <i class="fas fa-paper-plane"></i> Email your CV and letter of intent
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Member profile modal -->
+  <div class="member-modal" role="dialog" aria-modal="true" aria-labelledby="memberModalName">
+    <div class="member-modal__panel">
+      <button class="member-modal__close" type="button" aria-label="Close profile">&times;</button>
+      <div class="member-modal__avatar"></div>
+      <div class="member-modal__name" id="memberModalName"></div>
+      <div class="member-modal__role"></div>
+      <p class="member-modal__bio"></p>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -337,15 +391,13 @@
       <div class="footer-grid">
         <div class="footer-about">
           <div class="footer-brand">
-            <img src="assets/logo.jpg" alt="DEAR Lab">
+            <img src="assets/logo-mark-light.png" alt="DEAR Lab">
             <div class="footer-brand__text">DEAR Lab</div>
           </div>
           <p>Disease Engineering and Advanced RNA Biology Lab at NUCSER, NITTE (Deemed to be University), Karnataka, India.</p>
           <div class="footer-social">
-            <a href="https://scholar.google.com/citations?hl=en&user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://www.linkedin.com/in/ag13031992/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://scholar.google.com/citations?hl=en&amp;user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+            <a href="#" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
         <div>
@@ -362,7 +414,6 @@
           <ul class="footer-links">
             <li><a href="news.html">News</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
             <li><a href="https://nitte.edu.in/nucser/" target="_blank" rel="noopener noreferrer">NUCSER</a></li>
           </ul>
         </div>
@@ -370,14 +421,14 @@
           <h4>Contact</h4>
           <ul class="footer-links">
             <li><a href="mailto:arpita.ghosh@nitte.edu.in">arpita.ghosh@nitte.edu.in</a></li>
-            <li>NUCSER, NITTE University</li>
-            <li>Deralakatte, Mangalore</li>
-            <li>Karnataka 575018, India</li>
+            <li>Room no. 200, Level minus 1, NUCSER</li>
+            <li>Paneer Campus, Deralakatte</li>
+            <li>Mangalore, Karnataka 575018, India</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 DEAR Lab. All rights reserved.</p>
+        <p>&copy; 2026 DEAR Lab. All rights reserved.</p>
         <p>NITTE (Deemed to be University)</p>
       </div>
     </div>
