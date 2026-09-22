@@ -277,10 +277,16 @@
 
 /* ---------- Team ---------- */
 .pi-card { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; border: 1px solid var(--line); padding: clamp(1.5rem, 3vw, 2.5rem); background: rgba(232,213,240,0.03); border-radius: 0; box-shadow: none; }
+@media (max-width: 900px) {
+  .pi-card { grid-template-columns: 1fr; }
+  .pi-card__photo { max-width: 260px; }
+}
 .pi-card__photo { border-radius: 0 !important; }
 .pi-card__info h2 { font-size: var(--fs-h3); }
 .pi-card__title { color: var(--violet); font-size: var(--fs-small); font-weight: 500; margin-top: 0.35rem; text-transform: uppercase; letter-spacing: 0.1em; }
 .pi-card__bio { color: var(--text-mute); line-height: 1.8; margin-top: var(--stack-sm); }
+.pi-card__bio p { margin-top: var(--stack-sm); }
+.pi-card__bio p:first-child { margin-top: 0; }
 .pi-card__links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: var(--stack-md); }
 
 .section--alt .pi-card { border-color: var(--line); background: rgba(255,255,255,0.55); }
