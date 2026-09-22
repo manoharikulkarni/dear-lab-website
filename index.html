@@ -3,260 +3,289 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DEAR Lab | Disease Engineering &amp; Advanced RNA Biology</title>
-  <meta name="description" content="DEAR Lab at NUCSER, NITTE University led by Dr. Arpita Ghosh — advancing RNA biology, lncRNAs, mechanosensing, GBM disease modelling, quantum RNA sensing, and small molecule therapeutics.">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <title>DEAR Lab | Disease Engineering and Advanced RNA Biology</title>
+  <meta name="description" content="The DEAR Lab at NUCSER, NITTE (Deemed to be University), led by Dr. Arpita Ghosh — decoding RNA, discovering vulnerabilities and engineering solutions for cancer.">
+  <link rel="icon" type="image/png" href="assets/img/brand/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar--transparent">
-    <div class="container">
-      <a href="index.html" class="nav-brand" aria-label="DEAR Lab home">
-        <img src="assets/logo-mark-light.png" alt="" class="nav-logo nav-logo--light" aria-hidden="true">
-        <img src="assets/logo-mark.png" alt="DEAR Lab" class="nav-logo nav-logo--dark">
-        <div class="nav-logo-text">DEAR<span>lab</span></div>
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand" aria-label="DEAR Lab home">
+        <img src="assets/img/brand/logo-mark.png" alt="" class="nav__logo nav__logo--dark">
+        <img src="assets/img/brand/logo-mark-light.png" alt="" class="nav__logo nav__logo--light" aria-hidden="true">
+        <span class="nav__wordmark"><b>DEAR Laboratory</b><span>Disease Engineering &amp; Advanced RNA Biology</span></span>
       </a>
-      <div class="nav-overlay"></div>
-      <div class="nav-menu">
-        <a href="index.html" class="nav-link nav-link--active">Home</a>
-        <a href="research.html" class="nav-link">Research</a>
-        <a href="team.html" class="nav-link">Team</a>
-        <a href="publications.html" class="nav-link">Publications</a>
-        <a href="news.html" class="nav-link">News</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </div>
-      <div class="nav-toggle" aria-label="Toggle Navigation Menu">
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Menu">
         <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <div class="nav__group">
+          <a href="index.html" class="nav__link nav__link--active" aria-current="page"><span class="nav__num">01</span><span>Home</span></a>
+          <a href="research.html" class="nav__link"><span class="nav__num">02</span><span>Research</span></a>
+        </div>
+        <div class="nav__group">
+          <a href="team.html" class="nav__link"><span class="nav__num">03</span><span>Team</span></a>
+          <a href="publications.html" class="nav__link"><span class="nav__num">04</span><span>Publications</span></a>
+        </div>
+        <div class="nav__group">
+          <a href="news.html" class="nav__link"><span class="nav__num">05</span><span>News</span></a>
+          <a href="gallery.html" class="nav__link"><span class="nav__num">06</span><span>Gallery</span></a>
+        </div>
+        <div class="nav__group">
+          <a href="contact.html" class="nav__link"><span class="nav__num">07</span><span>Contact</span></a>
+        </div>
       </div>
     </div>
   </nav>
+  <div class="nav__scrim"></div>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="hero__bg" aria-hidden="true">
-      <svg viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="hero__art" aria-hidden="true">
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="helixGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#9B6B9E" stop-opacity="0.85" />
-            <stop offset="50%" stop-color="#2A9D8F" stop-opacity="0.9" />
-            <stop offset="100%" stop-color="#5B2D8E" stop-opacity="0.8" />
+          <linearGradient id="hx1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#E8D5F0"/><stop offset="100%" stop-color="#2A9D8F"/>
           </linearGradient>
-          <linearGradient id="helixGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#2A9D8F" stop-opacity="0.85" />
-            <stop offset="50%" stop-color="#E8D5F0" stop-opacity="0.9" />
-            <stop offset="100%" stop-color="#9B6B9E" stop-opacity="0.75" />
+          <linearGradient id="hx2" x1="1" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#4DC4B6"/><stop offset="100%" stop-color="#9B6B9E"/>
           </linearGradient>
-          <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="3" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
         </defs>
-
-        <!-- Subtle Background Structural Rings & G-Quadruplex Motifs -->
-        <g opacity="0.35">
-          <circle cx="180" cy="220" r="110" stroke="url(#helixGrad1)" stroke-width="1.5" stroke-dasharray="4 6" />
-          <circle cx="1260" cy="680" r="150" stroke="url(#helixGrad2)" stroke-width="1.5" stroke-dasharray="6 8" />
-          <rect x="135" y="175" width="90" height="90" rx="18" stroke="#2A9D8F" stroke-width="1.2" fill="none" stroke-dasharray="3 5" transform="rotate(45 180 220)" />
-          <rect x="1205" y="625" width="110" height="110" rx="22" stroke="#9B6B9E" stroke-width="1.2" fill="none" stroke-dasharray="4 6" transform="rotate(30 1260 680)" />
+        <g stroke-linecap="round" fill="none" stroke-width="2">
+          <path d="M-60 450C120 180 300 180 480 450s360 270 540 0 300-270 480 0" stroke="url(#hx1)"/>
+          <path d="M-60 450C120 720 300 720 480 450s360-270 540 0 300 270 480 0" stroke="url(#hx2)"/>
+          <path d="M-60 250C140 120 320 120 520 250s380 130 580 0 260-70 440 20" stroke="url(#hx2)" stroke-dasharray="5 9" opacity=".5"/>
+          <path d="M-60 660C140 790 320 790 520 660s380-130 580 0 260 70 440-20" stroke="url(#hx1)" stroke-dasharray="5 9" opacity=".5"/>
         </g>
-
-        <!-- Double Helix Connecting Rungs (Base Pairs) -->
-        <g stroke-linecap="round" opacity="0.75">
-          <line x1="60" y1="360" x2="60" y2="540" stroke="url(#helixGrad1)" stroke-width="2" stroke-dasharray="4 4" />
-          <line x1="140" y1="280" x2="140" y2="620" stroke="url(#helixGrad1)" stroke-width="2.5" />
-          <line x1="220" y1="230" x2="220" y2="670" stroke="url(#helixGrad1)" stroke-width="2.5" />
-          <line x1="300" y1="260" x2="300" y2="640" stroke="url(#helixGrad1)" stroke-width="2.5" />
-          <line x1="380" y1="350" x2="380" y2="550" stroke="url(#helixGrad1)" stroke-width="2" stroke-dasharray="4 4" />
-          <line x1="450" y1="446" x2="450" y2="454" stroke="#E8D5F0" stroke-width="4" />
-          <line x1="520" y1="550" x2="520" y2="350" stroke="url(#helixGrad2)" stroke-width="2" stroke-dasharray="4 4" />
-          <line x1="600" y1="640" x2="600" y2="260" stroke="url(#helixGrad2)" stroke-width="2.5" />
-          <line x1="680" y1="670" x2="680" y2="230" stroke="url(#helixGrad2)" stroke-width="2.5" />
-          <line x1="760" y1="630" x2="760" y2="270" stroke="url(#helixGrad2)" stroke-width="2.5" />
-          <line x1="840" y1="540" x2="840" y2="360" stroke="url(#helixGrad2)" stroke-width="2" stroke-dasharray="4 4" />
-          <line x1="910" y1="446" x2="910" y2="454" stroke="#E8D5F0" stroke-width="4" />
-          <line x1="980" y1="360" x2="980" y2="540" stroke="url(#helixGrad1)" stroke-width="2" stroke-dasharray="4 4" />
-          <line x1="1060" y1="270" x2="1060" y2="630" stroke="url(#helixGrad1)" stroke-width="2.5" />
-          <line x1="1140" y1="230" x2="1140" y2="670" stroke="url(#helixGrad1)" stroke-width="2.5" />
-          <line x1="1220" y1="260" x2="1220" y2="640" stroke="url(#helixGrad1)" stroke-width="2.5" />
-          <line x1="1300" y1="340" x2="1300" y2="560" stroke="url(#helixGrad1)" stroke-width="2" stroke-dasharray="4 4" />
-          <line x1="1380" y1="430" x2="1380" y2="470" stroke="url(#helixGrad1)" stroke-width="2" />
+        <g stroke="url(#hx1)" stroke-width="1.5" opacity=".55">
+          <line x1="140" y1="300" x2="140" y2="600"/><line x1="260" y1="240" x2="260" y2="660"/>
+          <line x1="380" y1="300" x2="380" y2="600"/><line x1="620" y1="300" x2="620" y2="600"/>
+          <line x1="740" y1="240" x2="740" y2="660"/><line x1="860" y1="300" x2="860" y2="600"/>
+          <line x1="1100" y1="300" x2="1100" y2="600"/><line x1="1220" y1="240" x2="1220" y2="660"/>
+          <line x1="1340" y1="300" x2="1340" y2="600"/>
         </g>
-
-        <!-- Continuous Helix Strands -->
-        <g stroke-linecap="round" fill="none">
-          <!-- Strand 1 -->
-          <path d="M-40 450 C 120 200, 240 200, 450 450 C 660 700, 780 700, 910 450 C 1040 200, 1160 200, 1370 450 C 1430 520, 1480 560, 1520 580" 
-                stroke="url(#helixGrad1)" stroke-width="4" filter="url(#glow)" />
-          
-          <!-- Strand 2 -->
-          <path d="M-40 450 C 120 700, 240 700, 450 450 C 660 200, 780 200, 910 450 C 1040 700, 1160 700, 1370 450 C 1430 380, 1480 340, 1520 320" 
-                stroke="url(#helixGrad2)" stroke-width="4" filter="url(#glow)" />
-        </g>
-
-        <!-- Helix Nodes on Strand 1 -->
-        <g>
-          <circle cx="60" cy="360" r="5" fill="#9B6B9E" />
-          <circle cx="140" cy="280" r="6" fill="#E8D5F0" />
-          <circle cx="220" cy="230" r="7" fill="#2A9D8F" />
-          <circle cx="300" cy="260" r="6" fill="#9B6B9E" />
-          <circle cx="380" cy="350" r="5" fill="#5B2D8E" />
-          <circle cx="450" cy="450" r="8" fill="#2A9D8F" />
-          <circle cx="520" cy="550" r="5" fill="#9B6B9E" />
-          <circle cx="600" cy="640" r="6" fill="#2A9D8F" />
-          <circle cx="680" cy="670" r="7" fill="#E8D5F0" />
-          <circle cx="760" cy="630" r="6" fill="#2A9D8F" />
-          <circle cx="840" cy="540" r="5" fill="#9B6B9E" />
-          <circle cx="910" cy="450" r="8" fill="#2A9D8F" />
-          <circle cx="980" cy="360" r="5" fill="#5B2D8E" />
-          <circle cx="1060" cy="270" r="6" fill="#9B6B9E" />
-          <circle cx="1140" cy="230" r="7" fill="#2A9D8F" />
-          <circle cx="1220" cy="260" r="6" fill="#E8D5F0" />
-          <circle cx="1300" cy="340" r="5" fill="#9B6B9E" />
-        </g>
-
-        <!-- Helix Nodes on Strand 2 -->
-        <g>
-          <circle cx="60" cy="540" r="5" fill="#2A9D8F" />
-          <circle cx="140" cy="620" r="6" fill="#9B6B9E" />
-          <circle cx="220" cy="670" r="7" fill="#E8D5F0" />
-          <circle cx="300" cy="640" r="6" fill="#2A9D8F" />
-          <circle cx="380" cy="550" r="5" fill="#9B6B9E" />
-          <circle cx="520" cy="350" r="5" fill="#2A9D8F" />
-          <circle cx="600" cy="260" r="6" fill="#9B6B9E" />
-          <circle cx="680" cy="230" r="7" fill="#5B2D8E" />
-          <circle cx="760" cy="270" r="6" fill="#E8D5F0" />
-          <circle cx="840" cy="360" r="5" fill="#2A9D8F" />
-          <circle cx="980" cy="540" r="5" fill="#2A9D8F" />
-          <circle cx="1060" cy="630" r="6" fill="#9B6B9E" />
-          <circle cx="1140" cy="670" r="7" fill="#E8D5F0" />
-          <circle cx="1220" cy="640" r="6" fill="#2A9D8F" />
-          <circle cx="1300" cy="560" r="5" fill="#9B6B9E" />
-        </g>
-
-        <!-- Secondary Background Helix -->
-        <g opacity="0.4" stroke-linecap="round" fill="none">
-          <path d="M-20 200 C 180 80, 360 80, 560 200 C 760 320, 940 320, 1140 200 C 1340 80, 1460 120, 1500 150" 
-                stroke="url(#helixGrad2)" stroke-width="2" stroke-dasharray="6 6" />
-          <path d="M-20 200 C 180 320, 360 320, 560 200 C 760 80, 940 80, 1140 200 C 1340 320, 1460 280, 1500 250" 
-                stroke="url(#helixGrad1)" stroke-width="2" stroke-dasharray="6 6" />
-          <circle cx="180" cy="140" r="3.5" fill="#2A9D8F" />
-          <circle cx="360" cy="260" r="3.5" fill="#9B6B9E" />
-          <circle cx="560" cy="200" r="4.5" fill="#E8D5F0" />
-          <circle cx="760" cy="140" r="3.5" fill="#2A9D8F" />
-          <circle cx="940" cy="260" r="3.5" fill="#9B6B9E" />
-          <circle cx="1140" cy="200" r="4.5" fill="#E8D5F0" />
-        </g>
-
-        <!-- Floating Nanoparticles -->
-        <circle cx="110" cy="780" r="3.5" fill="#2A9D8F" opacity="0.6" />
-        <circle cx="320" cy="120" r="4" fill="#9B6B9E" opacity="0.5" />
-        <circle cx="810" cy="100" r="3" fill="#E8D5F0" opacity="0.7" />
-        <circle cx="1040" cy="810" r="4" fill="#2A9D8F" opacity="0.6" />
-        <circle cx="1370" cy="210" r="3.5" fill="#9B6B9E" opacity="0.5" />
-        <circle cx="670" cy="830" r="3" fill="#5B2D8E" opacity="0.6" />
       </svg>
     </div>
 
-    <div class="hero__content">
-      <img src="assets/logo-mark-light.png" alt="DEAR Lab logo" class="hero__logo">
-      <h1 class="hero__title">DEAR <span class="highlight">Lab</span></h1>
-      <p class="hero__subtitle mb-xl">Disease Engineering and Advanced RNA Biology</p>
+    <div class="shell hero__inner">
+      <h1 class="hero__title">Decoding RNA.<br>Discovering <em>vulnerabilities</em>.<br>Engineering solutions.</h1>
 
-      <a href="#vision" class="hero__scroll" aria-label="Scroll down to Vision section">
-        <span>Scroll Down</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- Vision Section -->
-  <section id="vision" class="section reveal">
-    <div class="container">
-      <div class="section-header">
-        <span class="label">Our Vision</span>
-        <h2>Decoding RNA. Discovering vulnerabilities. Engineering solutions.</h2>
-        <div class="divider"></div>
+      <div class="hero__meta">
+        <p class="hero__tag">The Disease Engineering and Advanced RNA Biology Lab &mdash; where RNA biology, mechanobiology and bioengineering meet cancer.</p>
       </div>
+    </div>
+  </header>
 
-      <div class="vision-lede">
-        <p>
-          At the <strong>Disease Engineering and Advanced RNA Biology (DEAR) Lab</strong>, based at NUCSER, NITTE (Deemed to be University), Karnataka, we seek to understand how RNA governs disease and harness this knowledge to engineer innovative solutions for cancer and other intractable diseases.
-        </p>
-        <p>
-          Our research sits at the intersection of RNA biology, cancer biology, mechanobiology, and bioengineering. We investigate the complex regulatory landscape of non-coding RNAs, including long non-coding RNAs (lncRNAs) and microRNAs, as well as their higher-order structures, interactions, and dynamic organization within cells. By deciphering how these RNA networks influence cellular identity, plasticity, and disease progression, we aim to uncover previously unrecognized vulnerabilities in cancer.
-        </p>
-        <p>
-          A key focus of our work is understanding how the physical microenvironment shapes RNA-mediated regulation of aggressive cancers. Using biomimetic 3D tumoroid models, we investigate how mechanical cues such as matrix stiffness and cellular forces reshape RNA programs and contribute to tumor progression, invasion, and therapy resistance, with a particular focus on glioblastoma.
-        </p>
-        <p>
-          We further integrate advanced RNA-sensing and bioengineering technologies to move from discovery to application &mdash; developing approaches that can detect, interrogate, and ultimately manipulate disease-associated RNA networks.
-        </p>
-        <p class="lede-close">
-          Our goal is to move from understanding RNA to engineering disease solutions.
-        </p>
-
-        <div class="text-center mt-lg">
-          <a href="research.html" class="btn btn--primary">
-            Explore our Research Pillars <i class="fas fa-arrow-right"></i>
-          </a>
+  <!-- ============ VISION ============ -->
+  <section class="section surface--paper" id="vision">
+    <div class="shell">
+      <div class="sect-head reveal">
+        <div class="sect-head__marker marker">00 &mdash; Vision</div>
+        <div class="sect-head__body">
+          <p class="eyebrow">Our Vision</p>
+          <h2 class="sect-head__title">Understanding RNA deeply enough to engineer better solutions for cancer.</h2>
         </div>
       </div>
 
-      <figure class="figure-wide">
-        <div class="figure-wide__frame" data-lightbox role="button" tabindex="0" aria-label="Enlarge the research overview figure">
-          <img src="assets/research-overview.jpg" alt="DEAR Lab research overview: RNA biology, mechanobiology, 3D tumoroid models and RNA-sensing and bioengineering converge on understanding RNA in disease, leading towards early diagnosis, targeted therapies, overcoming therapy resistance and improved patient outcomes." loading="lazy">
+      <div class="split">
+        <div class="split__aside reveal">
+          <p class="eyebrow eyebrow--bare">Where we work</p>
+          <p class="text-mute" style="font-size: var(--fs-small); margin-top: var(--stack-sm);">
+            RNA biology &middot; Cancer biology &middot; Mechanobiology &middot; Bioengineering
+          </p>
+        </div>
+
+        <div class="split__body stack-md reveal">
+          <p class="lead" style="max-width: none;">
+            At the <strong>Disease Engineering and Advanced RNA Biology (DEAR) Lab</strong>, based at NUCSER, NITTE (Deemed to be University), Karnataka, we seek to understand how RNA governs disease and harness this knowledge to engineer innovative solutions for cancer and other intractable diseases.
+          </p>
+          <p class="text-mute">
+            Our research sits at the intersection of RNA biology, cancer biology, mechanobiology, and bioengineering. We investigate the complex regulatory landscape of non-coding RNAs, including long non-coding RNAs (lncRNAs) and microRNAs, as well as their higher-order structures, interactions, and dynamic organization within cells. By deciphering how these RNA networks influence cellular identity, plasticity, and disease progression, we aim to uncover previously unrecognized vulnerabilities in cancer.
+          </p>
+          <p class="text-mute">
+            A key focus of our work is understanding how the physical microenvironment shapes RNA-mediated regulation of aggressive cancers. Using biomimetic 3D tumoroid models, we investigate how mechanical cues such as matrix stiffness and cellular forces reshape RNA programs and contribute to tumor progression, invasion, and therapy resistance, with a particular focus on glioblastoma.
+          </p>
+          <p class="text-mute">
+            We further integrate advanced RNA-sensing and bioengineering technologies to move from discovery to application &mdash; developing approaches that can detect, interrogate, and ultimately manipulate disease-associated RNA networks.
+          </p>
+          <p class="text-violet" style="font-size: var(--fs-lead); font-weight: 500;">
+            Our goal is to move from understanding RNA to engineering disease solutions.
+          </p>
+          <p><a href="research.html" class="link-rule">Explore our Research Pillars
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FRAMEWORK FIGURE ============ -->
+  <section class="section section--flush-top surface--paper">
+    <div class="shell">
+      <figure class="figure reveal">
+        <div class="figure__frame" data-lightbox role="button" tabindex="0" aria-label="Enlarge the research framework figure">
+          <img src="assets/img/research/research-overview.jpg" alt="DEAR Lab research overview: RNA biology, mechanobiology, 3D tumoroid models and RNA-sensing and bioengineering converge on understanding RNA in disease, leading towards early diagnosis, targeted therapies, overcoming therapy resistance and improved patient outcomes." loading="lazy">
         </div>
         <figcaption>From understanding RNA in disease to engineering disease solutions &mdash; the DEAR Lab research framework.</figcaption>
       </figure>
     </div>
   </section>
 
-  <!-- Standard Footer -->
+  <!-- ============ RESEARCH PILLARS ============ -->
+  <section class="section surface--warm">
+    <div class="shell">
+      <div class="sect-head reveal">
+        <div class="sect-head__marker marker">01 &mdash; Research</div>
+        <div class="sect-head__body">
+          <p class="eyebrow">Five Pillars</p>
+          <h2 class="sect-head__title">What we work on.</h2>
+          <p class="lead sect-head__lead">From the structure of a single RNA fold to the mechanics of a tumour, and out to the technologies that read and rewrite them.</p>
+        </div>
+      </div>
+
+      <div class="rows reveal-stagger">
+          <article class="row">
+            <div class="row__num">01</div>
+            <div>
+              <h3 class="row__title">lncRNA &amp; miRNA Biology</h3>
+              <div class="row__tags">
+                <span class="tag">MALAT1</span>
+                <span class="tag">NEAT1</span>
+                <span class="tag">miR-21</span>
+                <span class="tag">G-quadruplex</span>
+              </div>
+            </div>
+            <p class="row__body">G-quadruplex structures in MALAT1, RNA&ndash;protein interactions with nucleolin and nucleophosmin, and branched DNA nanostructures that silence oncogenic miRNAs.</p>
+          </article>
+          <article class="row">
+            <div class="row__num">02</div>
+            <div>
+              <h3 class="row__title">Mechanosensing</h3>
+              <div class="row__tags">
+                <span class="tag">NEAT1</span>
+                <span class="tag">Substrate stiffness</span>
+                <span class="tag">Mechanotransduction</span>
+              </div>
+            </div>
+            <p class="row__body">How matrix stiffness and compressive force reshape lncRNA transcription &mdash; and how NEAT1 and nuclear paraspeckles read the physical tumour microenvironment.</p>
+          </article>
+          <article class="row">
+            <div class="row__num">03</div>
+            <div>
+              <h3 class="row__title">Disease Modelling &mdash; GBM</h3>
+              <div class="row__tags">
+                <span class="tag">Glioblastoma</span>
+                <span class="tag">3D tumoroids</span>
+                <span class="tag">Invasion</span>
+              </div>
+            </div>
+            <p class="row__body">Biomimetic 3D tumoroid platforms that reproduce the glioblastoma niche, and what three-dimensional geometry does to paraspeckle assembly, stemness and chemoresistance.</p>
+          </article>
+          <article class="row">
+            <div class="row__num">04</div>
+            <div>
+              <h3 class="row__title">RNA Sensing Technologies</h3>
+              <div class="row__tags">
+                <span class="tag">NV centres</span>
+                <span class="tag">Quantum sensing</span>
+                <span class="tag">Oxidative stress</span>
+              </div>
+            </div>
+            <p class="row__body">Nitrogen-vacancy centre nanodiamonds as quantum biosensors inside living cells, tracking oxidative stress and RNA dynamics in real time.</p>
+          </article>
+          <article class="row">
+            <div class="row__num">05</div>
+            <div>
+              <h3 class="row__title">Small Molecule Therapeutics</h3>
+              <div class="row__tags">
+                <span class="tag">PNA</span>
+                <span class="tag">TmPyP4</span>
+                <span class="tag">EMT</span>
+                <span class="tag">PTEN</span>
+              </div>
+            </div>
+            <p class="row__body">Peptidic aminosugars, dual-affinity PNAs and quadruplex-binding ligands designed to modulate RNA structure and restore tumour-suppressor pathways.</p>
+          </article>
+      </div>
+
+      <p style="margin-top: var(--stack-lg);">
+        <a href="research.html" class="link-rule">All research pillars
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ JOIN ============ -->
+  <section class="section surface--deep">
+    <div class="shell">
+      <div class="grid">
+        <div class="col-1-6 reveal">
+          <p class="eyebrow">Opportunities</p>
+          <h2 style="margin-top: var(--stack-sm);">We are looking for curious, driven researchers.</h2>
+        </div>
+        <div class="col-8-12 reveal stack-md" style="align-self: end;">
+          <p class="text-mute">Ph.D. positions open biannually under NUCSER guidelines. Applications are currently open for 2- and 6-month internships and postdoctoral positions.</p>
+          <p><a href="team.html#join-dear-lab" class="btn btn--primary">Join DEAR Lab
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-about">
-          <div class="footer-brand">
-            <img src="assets/logo-mark-light.png" alt="DEAR Lab">
-            <div class="footer-brand__text">DEAR Lab</div>
+    <div class="shell footer__inner">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">
+            <img src="assets/img/brand/logo-mark-light.png" alt="DEAR Lab">
+            <span>DEAR Lab</span>
           </div>
-          <p>Disease Engineering and Advanced RNA Biology Lab at NUCSER, NITTE (Deemed to be University), Karnataka, India.</p>
-          <div class="footer-social">
-            <a href="https://scholar.google.com/citations?hl=en&amp;user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            <a href="#" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <p class="footer__about">Disease Engineering and Advanced RNA Biology Lab at NUCSER, NITTE (Deemed to be University), Karnataka, India.</p>
+          <div class="footer__social">
+            <a href="https://scholar.google.com/citations?hl=en&amp;user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Zm0 13.2L5 12.4v3.1c0 2.2 3.1 4 7 4s7-1.8 7-4v-3.1l-7 3.8Z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" title="Instagram">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
           </div>
         </div>
+
         <div>
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
+          <h4>Explore</h4>
+          <ul class="footer__links">
             <li><a href="index.html">Home</a></li>
             <li><a href="research.html">Research</a></li>
             <li><a href="team.html">Team</a></li>
             <li><a href="publications.html">Publications</a></li>
           </ul>
         </div>
+
         <div>
           <h4>More</h4>
-          <ul class="footer-links">
+          <ul class="footer__links">
             <li><a href="news.html">News</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="https://nitte.edu.in/nucser/" target="_blank">NUCSER</a></li>
+            <li><a href="https://nitte.edu.in/nucser/" target="_blank" rel="noopener noreferrer">NUCSER</a></li>
           </ul>
         </div>
+
         <div>
           <h4>Contact</h4>
-          <ul class="footer-links">
+          <ul class="footer__links">
             <li><a href="mailto:arpita.ghosh@nitte.edu.in">arpita.ghosh@nitte.edu.in</a></li>
             <li>Room no. 200, Level minus 1, NUCSER</li>
             <li>Paneer Campus, Deralakatte</li>
@@ -264,21 +293,19 @@
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 DEAR Lab. All rights reserved.</p>
-        <p>NITTE (Deemed to be University)</p>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 DEAR Lab</span>
+        <span>NITTE (Deemed to be University)</span>
       </div>
     </div>
   </footer>
 
-  <!-- Lightbox -->
   <div class="lightbox">
-    <button class="lightbox__close" aria-label="Close image">&times;</button>
+    <button class="lightbox__close" type="button" aria-label="Close image">&times;</button>
     <img src="" alt="">
   </div>
 
-  <!-- Scripts -->
-  <script src="js/gallery.js"></script>
-  <script src="js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

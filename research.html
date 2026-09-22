@@ -3,50 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research — DEAR Lab | Disease Engineering and Advanced RNA Biology Lab</title>
-  <meta name="description" content="Explore research at the DEAR Lab: non-coding RNA biology, cellular mechanosensing, glioblastoma disease modelling, quantum sensing with NV-centers, and targeted small molecule therapeutics.">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-
-  <!-- Google Fonts -->
+  <title>Research | DEAR Lab</title>
+  <meta name="description" content="Research at the DEAR Lab: non-coding RNA biology, cellular mechanosensing, glioblastoma disease modelling, NV-centre quantum sensing and RNA-targeted therapeutics.">
+  <link rel="icon" type="image/png" href="assets/img/brand/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/legacy.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="nav-brand" aria-label="DEAR Lab home">
-        <img src="assets/logo-mark-light.png" alt="" class="nav-logo nav-logo--light" aria-hidden="true">
-        <img src="assets/logo-mark.png" alt="DEAR Lab" class="nav-logo nav-logo--dark">
-        <div class="nav-logo-text">DEAR<span>lab</span></div>
+  <nav class="nav nav--onpaper">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand" aria-label="DEAR Lab home">
+        <img src="assets/img/brand/logo-mark.png" alt="" class="nav__logo nav__logo--dark">
+        <img src="assets/img/brand/logo-mark-light.png" alt="" class="nav__logo nav__logo--light" aria-hidden="true">
+        <span class="nav__wordmark"><b>DEAR Laboratory</b><span>Disease Engineering &amp; Advanced RNA Biology</span></span>
       </a>
-      <div class="nav-overlay"></div>
-      <div class="nav-menu">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="research.html" class="nav-link nav-link--active">Research</a>
-        <a href="team.html" class="nav-link">Team</a>
-        <a href="publications.html" class="nav-link">Publications</a>
-        <a href="news.html" class="nav-link">News</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </div>
-      <div class="nav-toggle">
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Menu">
         <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <div class="nav__group">
+          <a href="index.html" class="nav__link"><span class="nav__num">01</span><span>Home</span></a>
+          <a href="research.html" class="nav__link nav__link--active" aria-current="page"><span class="nav__num">02</span><span>Research</span></a>
+        </div>
+        <div class="nav__group">
+          <a href="team.html" class="nav__link"><span class="nav__num">03</span><span>Team</span></a>
+          <a href="publications.html" class="nav__link"><span class="nav__num">04</span><span>Publications</span></a>
+        </div>
+        <div class="nav__group">
+          <a href="news.html" class="nav__link"><span class="nav__num">05</span><span>News</span></a>
+          <a href="gallery.html" class="nav__link"><span class="nav__num">06</span><span>Gallery</span></a>
+        </div>
+        <div class="nav__group">
+          <a href="contact.html" class="nav__link"><span class="nav__num">07</span><span>Contact</span></a>
+        </div>
       </div>
     </div>
   </nav>
+  <div class="nav__scrim"></div>
 
   <!-- Page Header -->
   <header class="page-header">
@@ -190,146 +193,89 @@
     </div>
   </section>
 
-  <!-- Funding & Support Section -->
-  <section class="section reveal">
+  <!-- Funding & Support -->
+  <section class="section">
     <div class="container">
       <div class="section-header">
         <span class="label">Grants &amp; Sponsorship</span>
         <h2>Funding &amp; Support</h2>
-        <div class="divider"></div>
-        <p>Our research is supported by prestigious institutional grants and premier national funding agencies across India.</p>
+        <p>Our research is supported by institutional grants and national funding agencies across India.</p>
       </div>
 
-      <div class="collab-grid stagger">
-        <!-- NITTE University -->
-        <div class="collab-card">
-          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--clr-accent-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: var(--space-sm);">
-            <i class="fas fa-university"></i>
-          </div>
-          <div class="collab-card__name">NITTE University</div>
-          <div class="collab-card__affiliation">NITTE (Deemed to be University) Intramural Grants &amp; NUCSER Seed Support</div>
+      <div class="logo-wall reveal-stagger">
+        <div class="logo-wall__cell">
+          <img src="assets/img/logos/funders/nitte.png" alt="NITTE (Deemed to be University)" loading="lazy">
+          <span class="logo-wall__plate" hidden>NITTE (Deemed to be University)</span>
+          <span class="logo-wall__sub">Intramural NUFR &amp; NUCSER seed support</span>
         </div>
-
-        <!-- DST -->
-        <div class="collab-card">
-          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--clr-accent-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: var(--space-sm);">
-            <i class="fas fa-landmark"></i>
-          </div>
-          <div class="collab-card__name">DST</div>
-          <div class="collab-card__affiliation">Department of Science and Technology, Government of India</div>
+        <div class="logo-wall__cell">
+          <img src="assets/img/logos/funders/anrf.png" alt="ANRF" loading="lazy">
+          <span class="logo-wall__plate" hidden>ANRF</span>
+          <span class="logo-wall__sub">Prime Minister Early Career Research Grant</span>
         </div>
-
-        <!-- DBT -->
-        <div class="collab-card">
-          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--clr-accent-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: var(--space-sm);">
-            <i class="fas fa-dna"></i>
-          </div>
-          <div class="collab-card__name">DBT</div>
-          <div class="collab-card__affiliation">Department of Biotechnology, Ministry of Science &amp; Technology</div>
+        <div class="logo-wall__cell">
+          <img src="assets/img/logos/funders/dst.png" alt="DST" loading="lazy">
+          <span class="logo-wall__plate" hidden>DST</span>
+          <span class="logo-wall__sub">Department of Science and Technology</span>
         </div>
-
-        <!-- ICMR -->
-        <div class="collab-card">
-          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--clr-accent-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: var(--space-sm);">
-            <i class="fas fa-notes-medical"></i>
-          </div>
-          <div class="collab-card__name">ICMR</div>
-          <div class="collab-card__affiliation">Indian Council of Medical Research, New Delhi, India</div>
+        <div class="logo-wall__cell">
+          <img src="assets/img/logos/funders/dbt.png" alt="DBT" loading="lazy">
+          <span class="logo-wall__plate" hidden>DBT</span>
+          <span class="logo-wall__sub">Department of Biotechnology</span>
         </div>
-
-        <!-- SERB -->
-        <div class="collab-card">
-          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--clr-accent-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: var(--space-sm);">
-            <i class="fas fa-microscope"></i>
-          </div>
-          <div class="collab-card__name">SERB</div>
-          <div class="collab-card__affiliation">Science and Engineering Research Board / ANRF, India</div>
+        <div class="logo-wall__cell">
+          <img src="assets/img/logos/funders/icmr.png" alt="ICMR" loading="lazy">
+          <span class="logo-wall__plate" hidden>ICMR</span>
+          <span class="logo-wall__sub">Indian Council of Medical Research</span>
+        </div>
+        <div class="logo-wall__cell">
+          <img src="assets/img/logos/funders/serb.png" alt="SERB" loading="lazy">
+          <span class="logo-wall__plate" hidden>SERB</span>
+          <span class="logo-wall__sub">Science and Engineering Research Board</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Collaborators Section -->
-  <section class="section section--alt reveal">
+  <!-- Collaborators -->
+  <section class="section section--alt">
     <div class="container">
       <div class="section-header">
         <span class="label">Interdisciplinary Partnerships</span>
         <h2>Collaborators</h2>
-        <div class="divider"></div>
-        <p>We work in close synergy with clinical specialists, biophysicists, and chemical biologists across national and global centers.</p>
+        <p>We work in close synergy with clinical specialists, biophysicists and chemical biologists across national and global centres.</p>
       </div>
 
-      <div class="collab-grid stagger">
-        <!-- Collaborator 1 -->
-        <div class="collab-card">
-          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--clr-accent-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; margin-bottom: var(--space-xs);">
-            <i class="fas fa-user-md"></i>
-          </div>
-          <div class="collab-card__name">Dr. Vikram R. Rao, M.Ch.</div>
-          <div class="collab-card__affiliation">Department of Neurosurgery, KSHEMA, NITTE University</div>
-          <p style="font-size: 0.8rem; color: var(--clr-teal); margin-top: 8px; margin-bottom: 0;">
-            <i class="fas fa-handshake"></i> Patient-derived GBM samples &amp; clinical translation
-          </p>
+      <div class="logo-wall reveal-stagger">
+        <div class="logo-wall__cell">
+          <img src="assets/img/logos/collaborators/kshema.png" alt="KSHEMA, NITTE" loading="lazy">
+          <span class="logo-wall__plate" hidden>KSHEMA, NITTE</span>
+          <span class="logo-wall__sub">Neurosurgery &mdash; patient-derived GBM samples</span>
         </div>
-
-        <!-- Collaborator 2 -->
-        <div class="collab-card">
-          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--clr-accent-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; margin-bottom: var(--space-xs);">
-            <i class="fas fa-atom"></i>
-          </div>
-          <div class="collab-card__name">Prof. Sourav Mukherjee, Ph.D.</div>
-          <div class="collab-card__affiliation">Department of Physics &amp; Quantum Materials, IISc Bangalore</div>
-          <p style="font-size: 0.8rem; color: var(--clr-teal); margin-top: 8px; margin-bottom: 0;">
-            <i class="fas fa-handshake"></i> NV Center diamond sensor fabrication &amp; quantum optics
-          </p>
+        <div class="logo-wall__cell">
+          <img src="assets/img/logos/collaborators/iisc.png" alt="IISc Bangalore" loading="lazy">
+          <span class="logo-wall__plate" hidden>IISc Bangalore</span>
+          <span class="logo-wall__sub">NV-centre diamond sensors &amp; quantum optics</span>
         </div>
-
-        <!-- Collaborator 3 -->
-        <div class="collab-card">
-          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--clr-accent-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; margin-bottom: var(--space-xs);">
-            <i class="fas fa-vial"></i>
-          </div>
-          <div class="collab-card__name">Dr. Ananya Sen, Ph.D.</div>
-          <div class="collab-card__affiliation">Department of Chemistry, Indian Institute of Technology Bombay</div>
-          <p style="font-size: 0.8rem; color: var(--clr-teal); margin-top: 8px; margin-bottom: 0;">
-            <i class="fas fa-handshake"></i> Peptide Nucleic Acid (PNA) &amp; aminosugar synthesis
-          </p>
+        <div class="logo-wall__cell">
+          <img src="assets/img/logos/collaborators/iitb.png" alt="IIT Bombay" loading="lazy">
+          <span class="logo-wall__plate" hidden>IIT Bombay</span>
+          <span class="logo-wall__sub">PNA &amp; aminosugar synthesis</span>
         </div>
-
-        <!-- Collaborator 4 -->
-        <div class="collab-card">
-          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--clr-accent-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; margin-bottom: var(--space-xs);">
-            <i class="fas fa-compress-arrows-alt"></i>
-          </div>
-          <div class="collab-card__name">Prof. Rajesh K. Nair, Ph.D.</div>
-          <div class="collab-card__affiliation">Cellular Mechanobiology Lab, IIT Madras</div>
-          <p style="font-size: 0.8rem; color: var(--clr-teal); margin-top: 8px; margin-bottom: 0;">
-            <i class="fas fa-handshake"></i> Hydrogel stiffness scaffolds &amp; rheological analysis
-          </p>
+        <div class="logo-wall__cell">
+          <img src="assets/img/logos/collaborators/iitm.png" alt="IIT Madras" loading="lazy">
+          <span class="logo-wall__plate" hidden>IIT Madras</span>
+          <span class="logo-wall__sub">Hydrogel stiffness scaffolds &amp; rheology</span>
         </div>
-
-        <!-- Collaborator 5 -->
-        <div class="collab-card">
-          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--clr-accent-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; margin-bottom: var(--space-xs);">
-            <i class="fas fa-microscope"></i>
-          </div>
-          <div class="collab-card__name">Dr. Sneha Hegde, Ph.D.</div>
-          <div class="collab-card__affiliation">Division of Molecular Genetics, NUCSER, NITTE University</div>
-          <p style="font-size: 0.8rem; color: var(--clr-teal); margin-top: 8px; margin-bottom: 0;">
-            <i class="fas fa-handshake"></i> RNA-seq transcriptomics &amp; functional genomics
-          </p>
+        <div class="logo-wall__cell">
+          <img src="assets/img/logos/collaborators/nucser.png" alt="NUCSER, NITTE" loading="lazy">
+          <span class="logo-wall__plate" hidden>NUCSER, NITTE</span>
+          <span class="logo-wall__sub">RNA-seq transcriptomics &amp; functional genomics</span>
         </div>
-
-        <!-- Collaborator 6 -->
-        <div class="collab-card">
-          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--clr-accent-light); color: var(--clr-primary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; margin-bottom: var(--space-xs);">
-            <i class="fas fa-globe-americas"></i>
-          </div>
-          <div class="collab-card__name">Prof. Elena Martinez, Ph.D.</div>
-          <div class="collab-card__affiliation">Institute for Bioengineering of Catalonia (IBEC), Barcelona</div>
-          <p style="font-size: 0.8rem; color: var(--clr-teal); margin-top: 8px; margin-bottom: 0;">
-            <i class="fas fa-handshake"></i> 3D Microfluidic tumoroid platforms &amp; tissue engineering
-          </p>
+        <div class="logo-wall__cell">
+          <img src="assets/img/logos/collaborators/ibec.png" alt="IBEC Barcelona" loading="lazy">
+          <span class="logo-wall__plate" hidden>IBEC Barcelona</span>
+          <span class="logo-wall__sub">3D microfluidic tumoroid platforms</span>
         </div>
       </div>
     </div>
@@ -349,41 +295,47 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-about">
-          <div class="footer-brand">
-            <img src="assets/logo-mark-light.png" alt="DEAR Lab">
-            <div class="footer-brand__text">DEAR Lab</div>
+    <div class="shell footer__inner">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">
+            <img src="assets/img/brand/logo-mark-light.png" alt="DEAR Lab">
+            <span>DEAR Lab</span>
           </div>
-          <p>Disease Engineering and Advanced RNA Biology Lab at NUCSER, NITTE (Deemed to be University), Karnataka, India.</p>
-          <div class="footer-social">
-            <a href="https://scholar.google.com/citations?hl=en&amp;user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            <a href="#" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <p class="footer__about">Disease Engineering and Advanced RNA Biology Lab at NUCSER, NITTE (Deemed to be University), Karnataka, India.</p>
+          <div class="footer__social">
+            <a href="https://scholar.google.com/citations?hl=en&amp;user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Zm0 13.2L5 12.4v3.1c0 2.2 3.1 4 7 4s7-1.8 7-4v-3.1l-7 3.8Z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" title="Instagram">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
           </div>
         </div>
+
         <div>
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
+          <h4>Explore</h4>
+          <ul class="footer__links">
             <li><a href="index.html">Home</a></li>
             <li><a href="research.html">Research</a></li>
             <li><a href="team.html">Team</a></li>
             <li><a href="publications.html">Publications</a></li>
           </ul>
         </div>
+
         <div>
           <h4>More</h4>
-          <ul class="footer-links">
+          <ul class="footer__links">
             <li><a href="news.html">News</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="https://nitte.edu.in/nucser/" target="_blank">NUCSER</a></li>
+            <li><a href="https://nitte.edu.in/nucser/" target="_blank" rel="noopener noreferrer">NUCSER</a></li>
           </ul>
         </div>
+
         <div>
           <h4>Contact</h4>
-          <ul class="footer-links">
+          <ul class="footer__links">
             <li><a href="mailto:arpita.ghosh@nitte.edu.in">arpita.ghosh@nitte.edu.in</a></li>
             <li>Room no. 200, Level minus 1, NUCSER</li>
             <li>Paneer Campus, Deralakatte</li>
@@ -391,14 +343,19 @@
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 DEAR Lab. All rights reserved.</p>
-        <p>NITTE (Deemed to be University)</p>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 DEAR Lab</span>
+        <span>NITTE (Deemed to be University)</span>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="js/main.js"></script>
+  <div class="lightbox">
+    <button class="lightbox__close" type="button" aria-label="Close image">&times;</button>
+    <img src="" alt="">
+  </div>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
