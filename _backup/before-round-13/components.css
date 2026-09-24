@@ -78,27 +78,18 @@
 .nav__link--active .nav__num { color: var(--teal-lift); }
 
 /* Solid state once scrolled, and on inner pages */
-.nav--solid { background: rgba(12, 10, 15, 0.9); }
+.nav--solid {
+  background: rgba(12, 10, 15, 0.9);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+}
 
 /* Over a light page the bar flips to dark-on-paper */
 .nav--onpaper {
   background: var(--nav-paper-bg);
-  border-bottom-color: var(--line);
-}
-
-/* Blur lives on a pseudo-element: backdrop-filter on .nav itself would make it
-   the containing block for the fixed mobile drawer and squash it to bar height */
-.nav::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-}
-.nav--solid::before,
-.nav--onpaper::before {
   -webkit-backdrop-filter: blur(18px) saturate(140%);
   backdrop-filter: blur(18px) saturate(140%);
+  border-bottom-color: var(--line);
 }
 
 .nav--onpaper .nav__brand,
@@ -742,6 +733,18 @@
 
 .nav__logo { transition: opacity var(--t-base); }
 
+/* Dark theme: the "on paper" nav is now a dark bar, so it keeps the light logo */
+@media (prefers-color-scheme: dark) {
+  .nav--onpaper .nav__logo--light { opacity: 1; }
+  .nav--onpaper .nav__logo--dark  { opacity: 0; }
+  .nav--onpaper .nav__link:hover,
+  .nav--onpaper .nav__link--active,
+  .nav--onpaper .nav__link:hover .nav__num,
+  .nav--onpaper .nav__link--active .nav__num { color: var(--teal-lift); }
+  /* partner logos are dark-on-transparent: give them a light plate */
+  .logo-wall__cell img.is-loaded { background: #fff; padding: 6px 10px; border-radius: 4px; }
+}
+
 /* ============================================================
    Research page
    ============================================================ */
@@ -1131,6 +1134,10 @@
 .logo-row--collab img, .logo-row--funding img { transition: transform var(--t-base); }
 .logo-row--collab .logo-row__item:hover img,
 .logo-row--funding .logo-row__item:hover img { transform: scale(1.04); }
+@media (prefers-color-scheme: dark) {
+  .logo-row--collab .logo-row__item img.is-loaded,
+  .logo-row--funding .logo-row__item img.is-loaded { background: none; padding: 0; }
+}
 @media (max-width: 640px) {
   .logo-row--collab .logo-row__item,
   .logo-row--funding .logo-row__item { flex: 0 1 40%; display: flex; justify-content: center; }
@@ -1188,14 +1195,3 @@
 @media (prefers-reduced-motion: reduce) {
   .lightbox, .modal, .modal__panel, .lightbox img, .person__shot img { transition: none !important; transform: none !important; }
 }
-
-/* Inline SVG icons (replace the old icon-font glyphs) */
-.ico { display: inline-block; flex-shrink: 0; vertical-align: -0.2em; }
-.contact-item__icon { color: var(--violet); }
-.contact-item__icon .ico { width: 20px; height: 20px; vertical-align: 0; }
-.btn .ico { width: 16px; height: 16px; }
-.btn { gap: 0.55em; }
-.empty-state .ico { display: block; width: 28px; height: 28px; margin: 0 auto 0.75rem; color: var(--mauve); }
-.join-list { background: var(--line); border-block-color: var(--line); }
-.join-list li { background: var(--paper); }
-.join-list li .ico { color: var(--teal); margin-top: 0.3rem; }

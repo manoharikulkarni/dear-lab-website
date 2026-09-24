@@ -5,7 +5,7 @@
    ============================================================ */
 
 :root {
-  color-scheme: light;
+  color-scheme: light dark;
 
   /* --- Grounds --- */
   --paper:        #FFFFFF;
@@ -85,4 +85,37 @@
 
   /* --- Grain --- */
   --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+}
+
+/* ============================================================
+   Dark theme — follows the visitor's device setting
+   (prefers-color-scheme). Only tokens change; every component
+   reads from them.
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:        #121015;
+    --paper-warm:   #18151D;
+    --paper-deep:   #1F1B25;
+    --line:         rgba(255, 255, 255, 0.14);
+    --line-soft:    rgba(255, 255, 255, 0.08);
+
+    --ink:          #0C0A10;
+    --ink-deep:     #08070B;
+
+    --violet:       #B08AE6;
+    --violet-lift:  #C6A8EE;
+    --violet-deep:  #8A62C4;
+    --teal:         #4DC4B6;
+
+    --text:         #EFECF3;
+    --text-mute:    #B1ABBA;
+    --text-faint:   #827C8B;
+
+    --card-bg:       rgba(255, 255, 255, 0.035);
+    --card-bg-hover: rgba(255, 255, 255, 0.07);
+    --nav-paper-bg:  rgba(18, 16, 21, 0.9);
+    --hover-tint:    rgba(255, 255, 255, 0.04);
+    --on-violet:     #140F1A;
+  }
 }
