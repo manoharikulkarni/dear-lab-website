@@ -41,7 +41,7 @@
 
   .hero__tag { bottom: 1.1rem; }
 
-  .split { grid-template-columns: minmax(0, 1fr); gap: var(--stack-md); }
+  .split { gap: var(--stack-md); }
 
   .logo-wall { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
   .logo-wall__cell { min-height: 120px; }
