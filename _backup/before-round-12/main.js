@@ -69,7 +69,7 @@ function initReveal() {
       entry.target.classList.add('is-visible');
       io.unobserve(entry.target);
     });
-  }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
+  }, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
 
   items.forEach(el => io.observe(el));
 }
