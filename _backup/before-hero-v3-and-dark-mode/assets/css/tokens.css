@@ -1,0 +1,78 @@
+/* ============================================================
+   DEAR Lab — Design Tokens
+   Light editorial system: paper grounds, near-black text,
+   brand violet/teal as accent, grain over everything.
+   ============================================================ */
+
+:root {
+  /* --- Grounds --- */
+  --paper:        #FFFFFF;
+  --paper-warm:   #F6F4F1;
+  --paper-deep:   #EDEAE5;
+  --line:         rgba(17, 17, 19, 0.14);
+  --line-soft:    rgba(17, 17, 19, 0.08);
+
+  /* --- Dark grounds (hero + punctuation sections) --- */
+  --ink:          #131016;
+  --ink-deep:     #0C0A0F;
+  --ink-line:     rgba(255, 255, 255, 0.16);
+
+  /* --- Brand --- */
+  --violet:       #5B2D8E;
+  --violet-lift:  #7B4DAE;
+  --violet-deep:  #3E1D63;
+  --lilac:        #E8D5F0;
+  --mauve:        #9B6B9E;
+  --teal:         #2A9D8F;
+  --teal-lift:    #4DC4B6;
+
+  /* --- Text --- */
+  --text:         #111113;
+  --text-mute:    #55525C;
+  --text-faint:   #8C8892;
+  --on-ink:       #F3F1EE;
+  --on-ink-mute:  #A9A4B0;
+  --on-ink-faint: rgba(243, 241, 238, 0.45);
+
+  /* --- Type --- */
+  --font: 'Poppins', system-ui, -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --fs-display: clamp(2.2rem, 4.4vw, 4.4rem);
+  --fs-h1:      clamp(1.9rem, 3.6vw, 3.4rem);
+  --fs-h2:      clamp(1.5rem, 2.8vw, 2.6rem);
+  --fs-h3:      clamp(1.1rem, 1.6vw, 1.45rem);
+  --fs-lead:    clamp(1rem, 1.25vw, 1.2rem);
+  --fs-body:    0.975rem;
+  --fs-small:   0.875rem;
+  --fs-micro:   0.72rem;
+
+  --lh-tight:   1.0;
+  --lh-snug:    1.18;
+  --lh-body:    1.72;
+
+  --track-micro: 0.1em;
+  --track-head:  0.005em;
+
+  /* --- Rhythm --- */
+  --gutter:     clamp(1.25rem, 4vw, 3.75rem);
+  --section-y:  clamp(5rem, 13vh, 10.5rem);
+  --stack-xs:   0.5rem;
+  --stack-sm:   1rem;
+  --stack-md:   1.75rem;
+  --stack-lg:   3rem;
+  --stack-xl:   5rem;
+
+  --measure:    58ch;
+  --shell:      1600px;
+  --nav-h:      80px;
+
+  /* --- Motion --- */
+  --ease:       cubic-bezier(0.22, 1, 0.36, 1);
+  --t-fast:     0.25s var(--ease);
+  --t-base:     0.45s var(--ease);
+  --t-slow:     0.9s var(--ease);
+
+  /* --- Grain --- */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+}

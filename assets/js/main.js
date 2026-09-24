@@ -136,7 +136,11 @@ function initModal() {
       last = card;
       if (name) name.textContent = card.dataset.name || '';
       if (role) role.textContent = card.dataset.role || '';
-      if (bio)  bio.textContent  = card.dataset.bio || '';
+      if (bio) {
+        const paras = (card.dataset.bio || '').split(/\n\s*\n/).filter(s => s.trim());
+        bio.replaceChildren(...paras.map(s => { const p = document.createElement('p'); p.textContent = s.trim(); return p; }));
+      }
+      if (panel) panel.scrollTop = 0;
       if (photo) {
         const src = card.dataset.photo;
         if (src) { photo.src = src; photo.alt = card.dataset.name || ''; photo.hidden = false; }
@@ -168,7 +172,9 @@ function initLogoFallback() {
       if (plate) plate.hidden = false;
       img.remove();
     };
-    if (img.complete && img.naturalWidth === 0) fail();
+    const ok = () => img.classList.add('is-loaded');
+    if (img.complete) { img.naturalWidth === 0 ? fail() : ok(); }
     img.addEventListener('error', fail);
+    img.addEventListener('load', ok);
   });
 }

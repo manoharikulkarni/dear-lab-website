@@ -1,0 +1,162 @@
+/* ============================================================
+   DEAR Lab — Reset, typography, grain, utilities
+   ============================================================ */
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-padding-top: var(--nav-h);
+}
+
+body {
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text);
+  background: var(--paper);
+  overflow-x: hidden;
+}
+
+/* --- Grain over the whole page --- */
+body::after {
+  content: '';
+  position: fixed;
+  inset: -50%;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: var(--grain);
+  background-repeat: repeat;
+  opacity: 0.17;
+  mix-blend-mode: multiply;
+  animation: grainDrift 7s steps(6) infinite;
+}
+
+@keyframes grainDrift {
+  0%   { transform: translate(0, 0); }
+  17%  { transform: translate(-3%, -2%); }
+  34%  { transform: translate(2%, -4%); }
+  51%  { transform: translate(-2%, 3%); }
+  68%  { transform: translate(3%, 2%); }
+  85%  { transform: translate(-3%, 1%); }
+  100% { transform: translate(0, 0); }
+}
+
+img, svg, video { display: block; max-width: 100%; height: auto; }
+ul, ol { list-style: none; }
+a { color: inherit; text-decoration: none; transition: color var(--t-fast); }
+
+::selection { background: var(--teal); color: #fff; }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; }
+
+/* --- Headings: uppercase, light weight, wide and calm --- */
+h1, h2, h3, h4 {
+  font-family: var(--font);
+  font-weight: 400;
+  line-height: var(--lh-snug);
+  letter-spacing: var(--track-head);
+  text-transform: uppercase;
+  text-wrap: balance;
+  color: var(--text);
+}
+
+h1 { font-size: var(--fs-h1); font-weight: 300; line-height: 1.1; }
+h2 { font-size: var(--fs-h2); font-weight: 300; line-height: 1.15; }
+h3 { font-size: var(--fs-h3); font-weight: 400; }
+h4 { font-size: 0.95rem; font-weight: 500; }
+
+/* Sentence-case escape hatch */
+.h-sentence { text-transform: none; }
+
+/* Keep gene, RNA and molecule names exactly as written */
+.nom { text-transform: none; }
+
+p { text-wrap: pretty; }
+strong { font-weight: 600; color: var(--text); }
+
+/* --- Monospace micro-type (nav, markers, captions) --- */
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: var(--track-micro);
+  color: var(--teal);
+  line-height: 1;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 2.2em;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.55;
+}
+
+.eyebrow--bare::before { display: none; }
+
+.marker {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.lead {
+  font-size: var(--fs-lead);
+  line-height: 1.65;
+  font-weight: 300;
+  color: var(--text-mute);
+  max-width: var(--measure);
+  text-transform: none;
+}
+
+/* --- Utilities --- */
+.measure     { max-width: var(--measure); }
+.text-teal   { color: var(--teal); }
+.text-violet { color: var(--violet); }
+.text-mute   { color: var(--text-mute); }
+.center      { text-align: center; }
+.right       { text-align: right; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+.stack-sm > * + * { margin-top: var(--stack-sm); }
+.stack-md > * + * { margin-top: var(--stack-md); }
+.stack-lg > * + * { margin-top: var(--stack-lg); }
+
+/* --- Dark surfaces invert the scale --- */
+.on-dark,
+.surface--ink,
+.surface--deep {
+  color: var(--on-ink);
+}
+
+.surface--ink h1, .surface--ink h2, .surface--ink h3, .surface--ink h4,
+.surface--deep h1, .surface--deep h2, .surface--deep h3, .surface--deep h4 { color: var(--on-ink); }
+
+.surface--ink .lead, .surface--ink .text-mute,
+.surface--deep .lead, .surface--deep .text-mute { color: var(--on-ink-mute); }
+
+.surface--ink .marker, .surface--deep .marker { color: var(--on-ink-faint); }
+.surface--ink .eyebrow, .surface--deep .eyebrow { color: var(--teal-lift); }
+.surface--ink strong, .surface--deep strong { color: var(--on-ink); }

@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="assets/img/brand/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/tokens.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/layout.css">
@@ -52,19 +52,13 @@
 
   <!-- ============ HERO ============ -->
   <header class="hero">
-    <div class="hero__art" aria-hidden="true">
-      <img src="assets/img/hero/rna-transcription-bg.jpg" alt="" class="hero__art-img">
+    <div class="hero__stage">
+      <img src="assets/img/hero/home-bg-rna.jpg" alt="" class="hero__art-img">
+      <div class="hero__filter" aria-hidden="true"></div>
+      <h1 class="hero__title">Decoding RNA.<br>Discovering<br><em>vulnerabilities</em>.<br>Engineering<br>solutions.</h1>
     </div>
-    <div class="hero__rna-accent" aria-hidden="true"></div>
     <div class="hero__scrim" aria-hidden="true"></div>
-
-    <div class="shell hero__inner">
-      <h1 class="hero__title">Decoding RNA.<br>Discovering <em>vulnerabilities</em>.<br>Engineering solutions.</h1>
-
-      <div class="hero__meta">
-        <p class="hero__tag">The Disease Engineering and Advanced RNA Biology Lab &mdash; where RNA biology, mechanobiology and bioengineering meet cancer.</p>
-      </div>
-    </div>
+    <p class="hero__tag">The Disease Engineering and Advanced RNA Biology Lab &ndash; where RNA biology, mechanobiology and bioengineering meet cancer.</p>
   </header>
 
   <!-- ============ VISION ============ -->
@@ -115,7 +109,10 @@
     <div class="shell">
       <figure class="figure reveal">
         <div class="figure__frame" data-lightbox role="button" tabindex="0" aria-label="Enlarge the research framework figure">
-          <img src="assets/img/research/research-overview.svg" alt="DEAR Lab research overview: RNA biology, mechanobiology, 3D tumoroid models and RNA-sensing and bioengineering converge on understanding RNA in disease, leading towards early diagnosis, targeted therapies, overcoming therapy resistance and improved patient outcomes." loading="lazy">
+          <picture>
+            <source srcset="assets/img/research/research-framework.webp" type="image/webp">
+            <img src="assets/img/research/research-framework.png" width="1536" height="1024" alt="DEAR Lab research overview: RNA biology, mechanobiology, 3D tumoroid models and RNA-sensing and bioengineering converge on understanding RNA in disease, leading towards early diagnosis, targeted therapies, overcoming therapy resistance and improved patient outcomes." loading="lazy">
+          </picture>
         </div>
         <figcaption>From understanding RNA in disease to engineering disease solutions &mdash; the DEAR Lab research framework.</figcaption>
       </figure>
