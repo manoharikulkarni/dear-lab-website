@@ -60,11 +60,11 @@
   </header>
 
   <!-- Lab Group Photo -->
-  <section class="section reveal" style="padding-bottom: clamp(2.5rem, 6vh, 4rem);">
+  <section class="section reveal" style="padding-bottom: var(--space-xl);">
     <div class="container">
-      <figure class="figure-wide group-photo">
+      <figure class="figure-wide" style="margin-top: 0;">
         <div class="figure-wide__frame" data-lightbox role="button" tabindex="0" aria-label="Enlarge the lab photo">
-          <img src="assets/img/team/group-photo.jpg" width="1600" height="737" alt="The DEAR Lab team at NUCSER, NITTE (Deemed to be University)">
+          <img src="assets/img/team/team-photo.jpg" alt="The DEAR Lab team at NUCSER, NITTE (Deemed to be University)" style="max-height: 560px; object-fit: cover;">
         </div>
         <figcaption>DEAR Lab, NUCSER, NITTE (Deemed to be University)</figcaption>
       </figure>
@@ -72,25 +72,58 @@
   </section>
 
   <!-- Principal Investigator -->
-  <section class="section section--alt reveal" style="padding-top: clamp(3rem, 8vh, 5rem);">
+  <section class="section section--alt reveal" style="padding-top: var(--space-xl);">
     <div class="container">
       <div class="section-header">
         <h2>Principal Investigator</h2>
         <div class="divider"></div>
       </div>
 
-      <div class="people people--pi">
-        <button type="button" class="person person--pi" data-member
-             data-name="Dr. Arpita Ghosh" data-role="Assistant Professor Grade II | Principal Investigator, DEAR Lab" data-affil="NUCSER, NITTE (Deemed to be University), Karnataka, India"
-             data-photo="assets/img/team/pi/arpita-ghosh-card.jpg"
-             data-links="Google Scholar|https://scholar.google.com/citations?hl=en&amp;user=tj6ck0kAAAAJ;;NITTE Profile|https://nitte.edu.in/nucser/people-nucser.php"
-             data-bio="Dr. Arpita Ghosh hails from Kolkata, the City of Joy, in eastern India. Her scientific journey has been driven by a deep curiosity about how molecular systems work and how fundamental discoveries can be translated into solutions for human disease.&#10;&#10;She began her academic journey with a B.Tech.–M.Tech. dual degree in Biotechnology from KIIT University, Odisha, followed by a Ph.D. in Biological Sciences from CSIR–Institute of Genomics and Integrative Biology (IGIB), New Delhi, where she discovered the fascinating world of RNA biology and its structural and functional possibilities. She subsequently pursued postdoctoral research in the Department of Chemical Engineering at IIT Bombay, first as an Institute Postdoctoral Fellow and later as an ANRF National Postdoctoral Fellow, working at the intersection of RNA biology, cancer, mechanobiology, and disease engineering.&#10;&#10;Today, as an independent researcher and PI, she leads the Disease Engineering and Advanced RNA Biology (DEAR) Lab at NUCSER, NITTE, built around a central question:&#10;&#10;&gt; Can we understand RNA deeply enough to engineer better solutions for cancer?&#10;&#10;Her research explores long non-coding RNAs, microRNAs, RNA structures and higher-order RNA organization, and how these regulatory systems respond to the physical tumour microenvironment. Her work integrates RNA biology, mechanobiology, 3D tumour models, advanced sensing technologies, and therapeutic approaches to uncover mechanisms of cancer progression and therapy resistance.&#10;&#10;Dr. Ghosh is an awardee of several prestigious national and international recognitions and has presented her research at scientific forums across different parts of the world.&#10;&#10;Away from the laboratory, Arpita finds joy in music, dance, visual storytelling, and science communication. She loves telling stories — whether through a scientific figure, a research talk, a camera, or simply sharing the everyday journey of being a scientist. For her, creativity and science are not two separate worlds; both begin with curiosity, imagination, and the courage to ask questions.&#10;&#10;And that spirit of curiosity is at the heart of DEAR Lab.">
-          <span class="person__shot"><img src="assets/img/team/pi/arpita-ghosh-card.jpg" alt="Dr. Arpita Ghosh" width="600" height="720" loading="lazy"></span>
-          <span class="person__name">Dr. Arpita Ghosh</span>
-          <span class="person__role">Assistant Professor Grade II | Principal Investigator, DEAR Lab</span>
-          <span class="person__role person__role--affil">NUCSER, NITTE (Deemed to be University), Karnataka, India</span>
-        </button>
+      <div class="pi-card">
+        <img class="pi-card__photo" src="assets/img/team/pi/arpita-ghosh.jpg" alt="Dr. Arpita Ghosh">
+        <div class="pi-card__info">
+          <h2>Dr. Arpita Ghosh</h2>
+          <div class="pi-card__title">Assistant Professor Grade II | Principal Investigator, DEAR Lab</div>
+          <p class="text-muted" style="font-weight: 500; margin-bottom: var(--space-sm);">
+            <i class="fas fa-university" style="color: var(--clr-primary); margin-right: 6px;"></i> NUCSER, NITTE (Deemed to be University), Karnataka, India
+          </p>
+          <div class="pi-card__bio">
+            <p>
+              Dr. Arpita Ghosh hails from Kolkata, the City of Joy, in eastern India. Her scientific journey has been driven by a deep curiosity about how molecular systems work and how fundamental discoveries can be translated into solutions for human disease.
+            </p>
+            <p>
+              She began her academic journey with a B.Tech.&ndash;M.Tech. dual degree in Biotechnology from KIIT University, Odisha, followed by a Ph.D. in Biological Sciences from CSIR&ndash;Institute of Genomics and Integrative Biology (IGIB), New Delhi, where she discovered the fascinating world of RNA biology and its structural and functional possibilities. She subsequently pursued postdoctoral research in the Department of Chemical Engineering at IIT Bombay, first as an Institute Postdoctoral Fellow and later as an ANRF National Postdoctoral Fellow, working at the intersection of RNA biology, cancer, mechanobiology, and disease engineering.
+            </p>
+            <p>
+              Today, as an independent researcher and PI, she leads the Disease Engineering and Advanced RNA Biology (DEAR) Lab at NUCSER, NITTE, built around a central question:
+            </p>
+            <p class="pi-bio__question">
+              Can we understand RNA deeply enough to engineer better solutions for cancer?
+            </p>
+            <p>
+              Her research explores long non-coding RNAs, microRNAs, RNA structures and higher-order RNA organization, and how these regulatory systems respond to the physical tumour microenvironment. Her work integrates RNA biology, mechanobiology, 3D tumour models, advanced sensing technologies, and therapeutic approaches to uncover mechanisms of cancer progression and therapy resistance.
+            </p>
+            <p>
+              Dr. Ghosh is an awardee of several prestigious national and international recognitions and has presented her research at scientific forums across different parts of the world.
+            </p>
+            <p>
+              Away from the laboratory, Arpita finds joy in music, dance, visual storytelling, and science communication. She loves telling stories &mdash; whether through a scientific figure, a research talk, a camera, or simply sharing the everyday journey of being a scientist. For her, creativity and science are not two separate worlds; both begin with curiosity, imagination, and the courage to ask questions.
+            </p>
+            <p class="lede-close">
+              And that spirit of curiosity is at the heart of DEAR Lab.
+            </p>
+          </div>
+          <div class="pi-card__links">
+            <a href="https://scholar.google.com/citations?hl=en&amp;user=tj6ck0kAAAAJ" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+              <i class="fas fa-graduation-cap"></i> Google Scholar
+            </a>
+            <a href="https://nitte.edu.in/nucser/people-nucser.php" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
+              <i class="fas fa-external-link-alt"></i> NITTE Profile
+            </a>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -104,11 +137,19 @@
 
       <div class="people reveal-stagger">
         <button type="button" class="person" data-member
-             data-name="Ashish Soman" data-role="Project Associate-I — ANRF-PMECRG Project" data-photo="assets/img/team/members/ashish-soman.jpg"
+             data-name="Ashish Soman Yogesh" data-role="Project Associate-I — ANRF-PMECRG Project" data-photo="assets/img/team/members/ashish-soman-yogesh.jpg"
              data-bio="For Ashish, biology is less of a subject and more of a lifelong rabbit hole. Born and brought up in the beautiful Konkan region of Maharashtra, he studied Biotechnology for his graduation and Cancer Biology for his postgraduate degree. He is now a Project Associate at NUCSER, where he gets to spend his days doing what he enjoys most: asking questions about biology and occasionally getting lost in the answers.&#10;&#10;His current work focuses on lncRNA profiling in a glioblastoma multicellular tumoroid model. His research interests include telomere biology, brain tumours, particularly glioblastoma, and long non-coding RNAs. He is fascinated by the tiny molecular details that can have surprisingly big consequences. In other words, give him a complicated biological question and there is a decent chance he will happily disappear into it for the next few hours.&#10;&#10;When he is not in the lab, Ashish enjoys singing, listening to Hindustani classical music, and reading. He is also a proudly self-proclaimed biology nerd, which means there is always room for one more random biological fact in his head. He believes a good day can involve a fascinating research question, a great piece of music, and a book that makes him forget to check the time. And if a conversation somehow turns into biology, well, you have probably just found his favourite topic.">
-          <span class="person__shot"><img src="assets/img/team/members/ashish-soman.jpg" alt="Ashish Soman" width="600" height="720" loading="lazy"></span>
-          <span class="person__name">Ashish Soman</span>
+          <span class="person__shot"><img src="assets/img/team/members/ashish-soman-yogesh.jpg" alt="Ashish Soman Yogesh" width="600" height="720" loading="lazy"></span>
+          <span class="person__name">Ashish Soman Yogesh</span>
           <span class="person__role">Project Associate-I — ANRF-PMECRG Project</span>
+        </button>
+
+        <button type="button" class="person" data-member
+             data-name="Animikha Paul" data-role="PhD Scholar — Dept. of Chemical Engineering, IIT Bombay" data-photo="assets/img/team/members/animikha-paul.jpg"
+             data-bio="Coming from a family filled with biologists, her love for life sciences developed early. After spending her whole life in Kolkata and completing her Master’s in Biochemistry from Calcutta University, she moved to Mumbai to pursue her PhD at the Chemical Engineering department in IIT Bombay. Apart from having an interest in understanding the basics of cancer biology, she also enjoys playing football, creating art in the form of paintings and jewellery, trekking, or simply looking at the night sky.">
+          <span class="person__shot"><img src="assets/img/team/members/animikha-paul.jpg" alt="Animikha Paul" width="600" height="720" loading="lazy"></span>
+          <span class="person__name">Animikha Paul</span>
+          <span class="person__role">PhD Scholar — Dept. of Chemical Engineering, IIT Bombay</span>
         </button>
 
         <button type="button" class="person" data-member
@@ -136,18 +177,10 @@
         </button>
 
         <button type="button" class="person" data-member
-             data-name="Animikha Paul" data-role="PhD Scholar — Dept. of Chemical Engineering, IIT Bombay" data-photo="assets/img/team/members/animikha-paul.jpg"
-             data-bio="Coming from a family filled with biologists, her love for life sciences developed early. After spending her whole life in Kolkata and completing her Master’s in Biochemistry from Calcutta University, she moved to Mumbai to pursue her PhD at the Chemical Engineering department in IIT Bombay. Apart from having an interest in understanding the basics of cancer biology, she also enjoys playing football, creating art in the form of paintings and jewellery, trekking, or simply looking at the night sky.">
-          <span class="person__shot"><img src="assets/img/team/members/animikha-paul.jpg" alt="Animikha Paul" width="600" height="720" loading="lazy"></span>
-          <span class="person__name">Animikha Paul</span>
-          <span class="person__role">PhD Scholar — Dept. of Chemical Engineering, IIT Bombay</span>
-        </button>
-
-        <button type="button" class="person" data-member
-             data-name="Jalisha Riyona D&#39;Silva" data-role="BSc Biomedical Science (Hons) — NUSR Scholar" data-photo="assets/img/team/members/jalisha-dsilva.jpg"
-             data-bio="Jalisha Riyona D’Silva hails from Karnataka, India. She completed her schooling at St. Thomas Higher Primary School, Byndoor, followed by her PU at Expert PU College, Mangalore. She is currently pursuing her final year of B.Sc. Biomedical Sciences at Nitte University Centre for Science Education and Research, Mangalore.&#10;&#10;Driven by curiosity, creativity, and a love for science, she is currently working on the evaluation of differential expression of lncRNAs in 2D monolayer and 3D tumoroid models during liver cancer progression. For her, science is interesting because it is something she understands, questions, and genuinely enjoys learning about. Research keeps her curious, while painting brings out her creative side. She believes there is something beautiful about both science and art—science helps her understand how things work, while painting gives her a way to express her creativity.&#10;&#10;With a curious mind and a creative heart, Jalisha hopes to keep learning, exploring new possibilities, and turning her interest in science into meaningful discoveries.">
-          <span class="person__shot"><img src="assets/img/team/members/jalisha-dsilva.jpg" alt="Jalisha Riyona D&#39;Silva" width="600" height="720" loading="lazy"></span>
-          <span class="person__name">Jalisha Riyona D’Silva</span>
+             data-name="Jalisha Riyona D Silva" data-role="BSc Biomedical Science (Hons) — NUSR Scholar" data-photo="assets/img/team/members/jalisha-dsilva.jpg"
+             data-bio="Jalisha Riyona D Silva hails from Karnataka, India. She completed her schooling at St. Thomas Higher Primary School, Byndoor, followed by her PU at Expert PU College, Mangalore. She is currently pursuing her final year of B.Sc. Biomedical Sciences at Nitte University Centre for Science Education and Research, Mangalore.&#10;&#10;Driven by curiosity, creativity, and a love for science, she is currently working on the evaluation of differential expression of lncRNAs in 2D monolayer and 3D tumoroid models during liver cancer progression. For her, science is interesting because it is something she understands, questions, and genuinely enjoys learning about. Research keeps her curious, while painting brings out her creative side. She believes there is something beautiful about both science and art—science helps her understand how things work, while painting gives her a way to express her creativity.&#10;&#10;With a curious mind and a creative heart, Jalisha hopes to keep learning, exploring new possibilities, and turning her interest in science into meaningful discoveries.">
+          <span class="person__shot"><img src="assets/img/team/members/jalisha-dsilva.jpg" alt="Jalisha Riyona D Silva" width="600" height="720" loading="lazy"></span>
+          <span class="person__name">Jalisha Riyona D Silva</span>
           <span class="person__role">BSc Biomedical Science (Hons) — NUSR Scholar</span>
         </button>
 
@@ -255,9 +288,7 @@
       <p class="eyebrow">DEAR Lab</p>
       <h3 data-modal-name id="modalName" style="margin-top:var(--stack-sm);"></h3>
       <p data-modal-role class="text-teal" style="font-size:var(--fs-small);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.35rem;"></p>
-      <p data-modal-affil class="modal__affil" hidden></p>
       <div data-modal-bio class="modal__bio"></div>
-      <div data-modal-links class="modal__links" hidden></div>
     </div>
   </div>
 

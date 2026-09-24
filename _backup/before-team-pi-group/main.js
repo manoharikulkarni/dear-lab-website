@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initModal();
   initLogoFallback();
-  initStoryModals();
 });
 
 /* --- Nav: solid once scrolled, or immediately on inner pages --- */
@@ -139,26 +138,7 @@ function initModal() {
       if (role) role.textContent = card.dataset.role || '';
       if (bio) {
         const paras = (card.dataset.bio || '').split(/\n\s*\n/).filter(s => s.trim());
-        bio.replaceChildren(...paras.map(s => {
-          const p = document.createElement('p');
-          s = s.trim();
-          if (s.startsWith('> ')) { p.className = 'modal__quote'; s = s.slice(2); }
-          p.textContent = s;
-          return p;
-        }));
-      }
-      const affil = modal.querySelector('[data-modal-affil]');
-      if (affil) { affil.textContent = card.dataset.affil || ''; affil.hidden = !card.dataset.affil; }
-      const links = modal.querySelector('[data-modal-links]');
-      if (links) {
-        const items = (card.dataset.links || '').split(';;').filter(Boolean).map((pair, i) => {
-          const [label, href] = pair.split('|');
-          const a = document.createElement('a');
-          a.href = href; a.textContent = label; a.target = '_blank'; a.rel = 'noopener noreferrer';
-          a.className = 'btn btn--sm ' + (i === 0 ? 'btn--primary' : 'btn--outline');
-          return a;
-        });
-        links.replaceChildren(...items); links.hidden = !items.length;
+        bio.replaceChildren(...paras.map(s => { const p = document.createElement('p'); p.textContent = s.trim(); return p; }));
       }
       if (panel) panel.scrollTop = 0;
       if (photo) {
@@ -196,35 +176,5 @@ function initLogoFallback() {
     if (img.complete) { img.naturalWidth === 0 ? fail() : ok(); }
     img.addEventListener('error', fail);
     img.addEventListener('load', ok);
-  });
-}
-
-/* --- Pop-ups opened by [data-modal-open="<id>"] (e.g. news stories) --- */
-function initStoryModals() {
-  document.querySelectorAll('[data-modal-open]').forEach(trigger => {
-    const modal = document.getElementById(trigger.dataset.modalOpen);
-    if (!modal) return;
-    const close = modal.querySelector('.modal__close');
-    const panel = modal.querySelector('.modal__panel');
-    const shut = () => {
-      modal.classList.remove('is-open');
-      document.body.style.overflow = '';
-      trigger.focus();
-    };
-    const open = () => {
-      modal.classList.add('is-open');
-      document.body.style.overflow = 'hidden';
-      if (panel) panel.scrollTop = 0;
-      close && close.focus();
-    };
-    trigger.addEventListener('click', open);
-    trigger.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
-    });
-    close && close.addEventListener('click', shut);
-    modal.addEventListener('click', e => { if (e.target === modal) shut(); });
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && modal.classList.contains('is-open')) shut();
-    });
   });
 }

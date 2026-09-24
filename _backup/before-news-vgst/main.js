@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initModal();
   initLogoFallback();
-  initStoryModals();
 });
 
 /* --- Nav: solid once scrolled, or immediately on inner pages --- */
@@ -196,35 +195,5 @@ function initLogoFallback() {
     if (img.complete) { img.naturalWidth === 0 ? fail() : ok(); }
     img.addEventListener('error', fail);
     img.addEventListener('load', ok);
-  });
-}
-
-/* --- Pop-ups opened by [data-modal-open="<id>"] (e.g. news stories) --- */
-function initStoryModals() {
-  document.querySelectorAll('[data-modal-open]').forEach(trigger => {
-    const modal = document.getElementById(trigger.dataset.modalOpen);
-    if (!modal) return;
-    const close = modal.querySelector('.modal__close');
-    const panel = modal.querySelector('.modal__panel');
-    const shut = () => {
-      modal.classList.remove('is-open');
-      document.body.style.overflow = '';
-      trigger.focus();
-    };
-    const open = () => {
-      modal.classList.add('is-open');
-      document.body.style.overflow = 'hidden';
-      if (panel) panel.scrollTop = 0;
-      close && close.focus();
-    };
-    trigger.addEventListener('click', open);
-    trigger.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
-    });
-    close && close.addEventListener('click', shut);
-    modal.addEventListener('click', e => { if (e.target === modal) shut(); });
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && modal.classList.contains('is-open')) shut();
-    });
   });
 }

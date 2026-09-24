@@ -54,32 +54,87 @@
   <header class="page-header">
     <div class="container">
       <h1>Gallery</h1>
-      <p>Life at the DEAR Lab &ndash; moments from research, events, and team activities!</p>
+      <p>Life at the DEAR Lab — moments from research, events, and team activities</p>
     </div>
   </header>
 
   <!-- Main Content -->
   <main>
-    <section class="section gallery-section">
-      <div class="shell">
-        <div class="gallery-wall reveal-stagger">
-          <figure class="gallery-tile gallery-tile--feature" data-lightbox role="button" tabindex="0" aria-label="Enlarge photo">
-            <img src="assets/img/gallery/dear-lab-bench.jpg" width="1280" height="960" alt="DEAR Lab members in lab coats holding a hand-drawn &ldquo;DEAR LAB!!&rdquo; sign in the lab" loading="lazy">
-          </figure>
+    <section class="section reveal">
+      <div class="container">
+        <!-- Gallery Categories -->
+        <div class="gallery-filters" style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: var(--space-xl);">
+          <button type="button" class="btn btn--sm btn--primary">All</button>
+          <button type="button" class="btn btn--sm btn--outline">Lab Life</button>
+          <button type="button" class="btn btn--sm btn--outline">Team</button>
+          <button type="button" class="btn btn--sm btn--outline">Events</button>
+          <button type="button" class="btn btn--sm btn--outline">Conferences</button>
+        </div>
 
-          <div class="gallery-collage" aria-label="Tumoroids grown at DEAR Lab">
-            <figure class="gallery-tile" data-lightbox role="button" tabindex="0" aria-label="Enlarge tumoroid image 1">
-              <img src="assets/img/gallery/tumoroid-1.jpg" width="1280" height="960" alt="Brightfield microscope image of a 3D tumoroid grown at DEAR Lab (scale bar 1000 µm)" loading="lazy">
-            </figure>
-            <figure class="gallery-tile" data-lightbox role="button" tabindex="0" aria-label="Enlarge tumoroid image 2">
-              <img src="assets/img/gallery/tumoroid-2.jpg" width="1280" height="960" alt="Brightfield microscope image of a 3D tumoroid grown at DEAR Lab (scale bar 1000 µm)" loading="lazy">
-            </figure>
-            <figure class="gallery-tile" data-lightbox role="button" tabindex="0" aria-label="Enlarge tumoroid image 3">
-              <img src="assets/img/gallery/tumoroid-3.jpg" width="1280" height="960" alt="Brightfield microscope image of a 3D tumoroid grown at DEAR Lab (scale bar 1000 µm)" loading="lazy">
-            </figure>
-            <figure class="gallery-tile" data-lightbox role="button" tabindex="0" aria-label="Enlarge tumoroid image 4">
-              <img src="assets/img/gallery/tumoroid-4.jpg" width="1280" height="960" alt="Brightfield microscope image of a 3D tumoroid grown at DEAR Lab (scale bar 1000 µm)" loading="lazy">
-            </figure>
+        <!-- Gallery Grid -->
+        <div class="gallery-grid reveal-stagger">
+          <!-- Item 1: Team Photo -->
+          <div class="gallery-item" data-lightbox role="button" tabindex="0">
+            <img src="assets/img/team/team-photo.jpg" alt="DEAR Lab Team 2024">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">DEAR Lab Team 2024</span>
+            </div>
+          </div>
+
+          <!-- Item 2: Lab Bench Work -->
+          <div class="gallery-item" data-lightbox role="button" tabindex="0">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#5B2D8E,#2A9D8F);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.3);font-size:3rem;"><i class="fas fa-microscope"></i></div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Lab Bench Work</span>
+            </div>
+          </div>
+
+          <!-- Item 3: Cell Culture Room -->
+          <div class="gallery-item" data-lightbox role="button" tabindex="0">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#1B3A4B,#5B2D8E);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.3);font-size:3rem;"><i class="fas fa-flask"></i></div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Cell Culture Room</span>
+            </div>
+          </div>
+
+          <!-- Item 4: Team Presentation -->
+          <div class="gallery-item" data-lightbox role="button" tabindex="0">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#7B4DAE,#9B6B9E);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.3);font-size:3rem;"><i class="fas fa-chalkboard-teacher"></i></div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Team Presentation</span>
+            </div>
+          </div>
+
+          <!-- Item 5: Conference Poster -->
+          <div class="gallery-item" data-lightbox role="button" tabindex="0">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#2A9D8F,#1B3A4B);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.3);font-size:3rem;"><i class="fas fa-award"></i></div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Conference Poster</span>
+            </div>
+          </div>
+
+          <!-- Item 6: Lab Outing -->
+          <div class="gallery-item" data-lightbox role="button" tabindex="0">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#9B6B9E,#5B2D8E);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.3);font-size:3rem;"><i class="fas fa-users"></i></div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Lab Outing</span>
+            </div>
+          </div>
+
+          <!-- Item 7: Seminar Series -->
+          <div class="gallery-item" data-lightbox role="button" tabindex="0">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#3E1D63,#2A9D8F);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.3);font-size:3rem;"><i class="fas fa-brain"></i></div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Seminar Series</span>
+            </div>
+          </div>
+
+          <!-- Item 8: NITTE Campus -->
+          <div class="gallery-item" data-lightbox role="button" tabindex="0">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#1B3A4B,#4DC4B6);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.3);font-size:3rem;"><i class="fas fa-university"></i></div>
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">NITTE Campus</span>
+            </div>
           </div>
         </div>
       </div>

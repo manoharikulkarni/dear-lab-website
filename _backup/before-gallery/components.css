@@ -1046,39 +1046,3 @@
   .news-feature { grid-template-columns: 1fr; }
   .story__gallery { grid-template-columns: 1fr; }
 }
-
-/* ============================================================
-   Gallery: a simple wall of photos
-   ============================================================ */
-.gallery-section { padding-top: clamp(2.5rem, 7vh, 4.5rem); }
-.gallery-wall {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(0.6rem, 1.4vw, 1rem);
-  align-items: stretch;
-}
-.gallery-tile {
-  position: relative;
-  margin: 0;
-  overflow: hidden;
-  background: var(--paper-deep);
-  cursor: zoom-in;
-}
-.gallery-tile img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform var(--t-slow);
-}
-.gallery-tile:hover img, .gallery-tile:focus-visible img { transform: scale(1.04); }
-.gallery-tile--feature img { aspect-ratio: 4 / 3; }
-.gallery-collage {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(0.6rem, 1.4vw, 1rem);
-}
-.gallery-collage .gallery-tile img { aspect-ratio: 4 / 3; }
-@media (max-width: 760px) {
-  .gallery-wall { grid-template-columns: 1fr; }
-}
