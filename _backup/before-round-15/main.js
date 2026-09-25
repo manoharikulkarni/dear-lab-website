@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initModal();
   initLogoFallback();
   initStoryModals();
-  initMailLinks();
 });
 
 /* --- Nav: solid once scrolled, or immediately on inner pages --- */
@@ -228,74 +227,4 @@ function initStoryModals() {
       if (e.key === 'Escape' && modal.classList.contains('is-open')) shut();
     });
   });
-}
-
-/* --- Email links: let visitors pick how to write, so a missing default
-       mail app never makes the button look broken --- */
-function initMailLinks() {
-  const links = document.querySelectorAll('a[href^="mailto:"]');
-  if (!links.length) return;
-
-  const box = document.createElement('div');
-  box.className = 'mail-pick';
-  box.setAttribute('role', 'dialog');
-  box.setAttribute('aria-modal', 'true');
-  box.setAttribute('aria-label', 'Send an email');
-  box.innerHTML =
-    '<div class="mail-pick__panel">' +
-      '<p class="mail-pick__label">Send an email to</p>' +
-      '<p class="mail-pick__addr"></p>' +
-      '<div class="mail-pick__list">' +
-        '<a data-k="app" href="#">Open in my email app</a>' +
-        '<a data-k="gmail" href="#" target="_blank" rel="noopener noreferrer">Open in Gmail</a>' +
-        '<a data-k="outlook" href="#" target="_blank" rel="noopener noreferrer">Open in Outlook</a>' +
-        '<button type="button" data-k="copy">Copy email address</button>' +
-      '</div>' +
-      '<button type="button" class="mail-pick__close">Cancel</button>' +
-    '</div>';
-  document.body.appendChild(box);
-
-  const addrEl = box.querySelector('.mail-pick__addr');
-  const app = box.querySelector('[data-k="app"]');
-  const gmail = box.querySelector('[data-k="gmail"]');
-  const outlook = box.querySelector('[data-k="outlook"]');
-  const copy = box.querySelector('[data-k="copy"]');
-  let last = null;
-
-  const shut = () => { box.classList.remove('is-open'); last && last.focus(); };
-
-  links.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      last = link;
-      const raw = link.getAttribute('href').slice(7);
-      const [to, query = ''] = raw.split('?');
-      const params = new URLSearchParams(query);
-      const subject = params.get('subject') || '';
-      const email = decodeURIComponent(to);
-      addrEl.textContent = email;
-      app.href = link.getAttribute('href');
-      gmail.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(email) + (subject ? '&su=' + encodeURIComponent(subject) : '');
-      outlook.href = 'https://outlook.office.com/mail/deeplink/compose?to=' + encodeURIComponent(email) + (subject ? '&subject=' + encodeURIComponent(subject) : '');
-      copy.textContent = 'Copy email address';
-      box.classList.add('is-open');
-      app.focus();
-    });
-  });
-
-  app.addEventListener('click', () => { window.location.href = app.href; setTimeout(shut, 300); });
-  gmail.addEventListener('click', () => setTimeout(shut, 100));
-  outlook.addEventListener('click', () => setTimeout(shut, 100));
-  copy.addEventListener('click', async () => {
-    const email = addrEl.textContent;
-    try { await navigator.clipboard.writeText(email); }
-    catch (err) {
-      const t = document.createElement('textarea'); t.value = email; document.body.appendChild(t);
-      t.select(); try { document.execCommand('copy'); } catch (e) {} t.remove();
-    }
-    copy.textContent = 'Copied!';
-  });
-  box.querySelector('.mail-pick__close').addEventListener('click', shut);
-  box.addEventListener('click', e => { if (e.target === box) shut(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && box.classList.contains('is-open')) shut(); });
 }
