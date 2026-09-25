@@ -1241,3 +1241,5 @@
 .person--pi .person__shot img { object-position: center; }
 .person--pi .person__name { margin-top: 1.1rem; font-size: var(--fs-h3); }
 .person--pi .person__role { font-size: var(--fs-small); max-width: 52ch; margin-inline: auto; }
+
+.section-header--center { margin-inline: auto; text-align: center; }
