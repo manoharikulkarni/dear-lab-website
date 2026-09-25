@@ -1,5 +1,5 @@
 /* ============================================================
-   DEAR Lab - Compatibility layer
+   DEAR Lab — Compatibility layer
    Maps the previous class vocabulary onto the new token system,
    so pages not yet rebuilt still read as one design.
    Retire this file once every page uses the new components.

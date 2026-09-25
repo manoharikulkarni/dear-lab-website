@@ -1,5 +1,5 @@
 /* ============================================================
-   DEAR Lab - Site behaviour
+   DEAR Lab — Site behaviour
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {

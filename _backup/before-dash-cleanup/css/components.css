@@ -1,5 +1,5 @@
 /* ============================================================
-   DEAR Lab - Components
+   DEAR Lab — Components
    ============================================================ */
 
 /* ---------- Navigation ----------
@@ -189,7 +189,7 @@
 @media (min-width: 901px) {
   .hero {
     --stage-gap: var(--gutter);
-    --t-left: 0.0599;   /* 100 / 1670 - the open field left of the DNA */
+    --t-left: 0.0599;   /* 100 / 1670 — the open field left of the DNA */
     --t-right: 0.3366;  /* widest line ends before the DNA begins */
     --t-top: 32.36%;    /* block centred on y = 453 / 941 */
     --t-size: 3.234cqw; /* 54 / 1670 */
