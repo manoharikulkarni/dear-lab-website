@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light only">
-  <title>DEAR Lab | Disease Engineering and Advanced RNA Biology</title>
-  <meta name="description" content="The DEAR Lab at NUCSER, NITTE (Deemed to be University), led by Dr. Arpita Ghosh — decoding RNA, discovering vulnerabilities and engineering solutions for cancer.">
+  <title>Gallery | DEAR Lab</title>
+  <meta name="description" content="Life at the DEAR Lab — research, events and team moments.">
   <link rel="icon" type="image/png" href="assets/img/brand/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/tokens.css?v=20260925d">
-  <link rel="stylesheet" href="assets/css/base.css?v=20260925d">
-  <link rel="stylesheet" href="assets/css/layout.css?v=20260925d">
-  <link rel="stylesheet" href="assets/css/components.css?v=20260925d">
-  <link rel="stylesheet" href="assets/css/responsive.css?v=20260925d">
+  <link rel="stylesheet" href="assets/css/tokens.css?v=20260925b">
+  <link rel="stylesheet" href="assets/css/base.css?v=20260925b">
+  <link rel="stylesheet" href="assets/css/layout.css?v=20260925b">
+  <link rel="stylesheet" href="assets/css/components.css?v=20260925b">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=20260925b">
+  <link rel="stylesheet" href="assets/css/legacy.css?v=20260925b">
 </head>
 <body>
-
-  <nav class="nav">
+  <nav class="nav nav--onpaper">
     <div class="nav__inner">
       <a href="index.html" class="nav__brand" aria-label="DEAR Lab home">
         <img src="assets/img/brand/logo-mark.png" alt="" class="nav__logo nav__logo--dark">
@@ -32,7 +32,7 @@
 
       <div class="nav__menu" id="navMenu">
         <div class="nav__group">
-          <a href="index.html" class="nav__link nav__link--active" aria-current="page"><span class="nav__num">01</span><span>Home</span></a>
+          <a href="index.html" class="nav__link"><span class="nav__num">01</span><span>Home</span></a>
           <a href="research.html" class="nav__link"><span class="nav__num">02</span><span>Research</span></a>
         </div>
         <div class="nav__group">
@@ -41,7 +41,7 @@
         </div>
         <div class="nav__group">
           <a href="news.html" class="nav__link"><span class="nav__num">05</span><span>News</span></a>
-          <a href="gallery.html" class="nav__link"><span class="nav__num">06</span><span>Gallery</span></a>
+          <a href="gallery.html" class="nav__link nav__link--active" aria-current="page"><span class="nav__num">06</span><span>Gallery</span></a>
         </div>
         <div class="nav__group">
           <a href="contact.html" class="nav__link"><span class="nav__num">07</span><span>Contact</span></a>
@@ -51,68 +51,41 @@
   </nav>
   <div class="nav__scrim"></div>
 
-  <!-- ============ HERO ============ -->
-  <header class="hero">
-    <div class="hero__stage">
-      <img src="assets/img/hero/home-bg-rna.jpg" alt="" class="hero__art-img">
-      <div class="hero__filter" aria-hidden="true"></div>
-      <h1 class="hero__title">Decoding RNA.<br>Discovering<br><em>vulnerabilities</em>.<br>Engineering<br>solutions.</h1>
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Gallery</h1>
+      <p>Life at the DEAR Lab &ndash; moments from research, events, and team activities!</p>
     </div>
-    <div class="hero__scrim" aria-hidden="true"></div>
-    <p class="hero__tag">The Disease Engineering and Advanced RNA Biology Lab &ndash; where RNA biology, mechanobiology and bioengineering meets cancer.</p>
   </header>
 
-  <!-- ============ VISION ============ -->
-  <section class="section surface--paper" id="vision">
-    <div class="shell">
-      <div class="sect-head reveal">
-        <div class="sect-head__marker marker">00 &mdash; Vision</div>
-        <div class="sect-head__body">
-          <p class="eyebrow">Our Vision</p>
-          <h2 class="sect-head__title">Understanding RNA deeply enough to engineer better solutions for cancer.</h2>
+  <!-- Main Content -->
+  <main>
+    <section class="section gallery-section">
+      <div class="shell">
+        <div class="gallery-wall reveal-stagger">
+          <figure class="gallery-tile gallery-tile--feature" data-lightbox role="button" tabindex="0" aria-label="Enlarge photo">
+            <img src="assets/img/gallery/dear-lab-bench.jpg" width="1280" height="960" alt="DEAR Lab members in lab coats holding a hand-drawn &ldquo;DEAR LAB!!&rdquo; sign in the lab" loading="lazy">
+          </figure>
+
+          <div class="gallery-collage" aria-label="Tumoroids grown at DEAR Lab">
+            <figure class="gallery-tile" data-lightbox role="button" tabindex="0" aria-label="Enlarge tumoroid image 1">
+              <img src="assets/img/gallery/tumoroid-1.jpg" width="1280" height="960" alt="Brightfield microscope image of a 3D tumoroid grown at DEAR Lab (scale bar 1000 µm)" loading="lazy">
+            </figure>
+            <figure class="gallery-tile" data-lightbox role="button" tabindex="0" aria-label="Enlarge tumoroid image 2">
+              <img src="assets/img/gallery/tumoroid-2.jpg" width="1280" height="960" alt="Brightfield microscope image of a 3D tumoroid grown at DEAR Lab (scale bar 1000 µm)" loading="lazy">
+            </figure>
+            <figure class="gallery-tile" data-lightbox role="button" tabindex="0" aria-label="Enlarge tumoroid image 3">
+              <img src="assets/img/gallery/tumoroid-3.jpg" width="1280" height="960" alt="Brightfield microscope image of a 3D tumoroid grown at DEAR Lab (scale bar 1000 µm)" loading="lazy">
+            </figure>
+            <figure class="gallery-tile" data-lightbox role="button" tabindex="0" aria-label="Enlarge tumoroid image 4">
+              <img src="assets/img/gallery/tumoroid-4.jpg" width="1280" height="960" alt="Brightfield microscope image of a 3D tumoroid grown at DEAR Lab (scale bar 1000 µm)" loading="lazy">
+            </figure>
+          </div>
         </div>
       </div>
-
-      <div class="split split--single">
-        <div class="split__body stack-md reveal">
-          <p class="lead" style="max-width: none;">
-            At the <strong>Disease Engineering and Advanced RNA Biology (DEAR) Lab</strong>, based at NUCSER, NITTE (Deemed to be University), Karnataka, we seek to understand how RNA governs disease and harness this knowledge to engineer innovative solutions for cancer and other intractable diseases.
-          </p>
-          <p class="text-mute">
-            Our research sits at the intersection of RNA biology, cancer biology, mechanobiology, and bioengineering. We investigate the complex regulatory landscape of non-coding RNAs, including long non-coding RNAs (lncRNAs) and microRNAs, as well as their higher-order structures, interactions, and dynamic organization within cells. By deciphering how these RNA networks influence cellular identity, plasticity, and disease progression, we aim to uncover previously unrecognized vulnerabilities in cancer.
-          </p>
-          <p class="text-mute">
-            A key focus of our work is understanding how the physical microenvironment shapes RNA-mediated regulation of aggressive cancers. Using biomimetic 3D tumoroid models, we investigate how mechanical cues such as matrix stiffness and cellular forces reshape RNA programs and contribute to tumor progression, invasion, and therapy resistance, with a particular focus on glioblastoma.
-          </p>
-          <p class="text-mute">
-            We further integrate advanced RNA-sensing and bioengineering technologies to move from discovery to application &mdash; developing approaches that can detect, interrogate, and ultimately manipulate disease-associated RNA networks.
-          </p>
-          <p class="text-violet" style="font-size: var(--fs-lead); font-weight: 500;">
-            Our goal is to move from understanding RNA to engineering disease solutions.
-          </p>
-          <p><a href="research.html" class="link-rule">Explore our Research Pillars
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FRAMEWORK FIGURE ============ -->
-  <section class="section section--flush-top surface--paper">
-    <div class="shell">
-      <figure class="figure figure--titled reveal">
-        <figcaption class="figure__title">The DEAR Lab research framework.</figcaption>
-        <div class="figure__frame" data-lightbox role="button" tabindex="0" aria-label="Enlarge the research framework figure">
-          <picture>
-            <source srcset="assets/img/research/research-framework.webp" type="image/webp">
-            <img src="assets/img/research/research-framework.png" width="1536" height="1024" alt="DEAR Lab research overview: RNA biology, mechanobiology, 3D tumoroid models and RNA-sensing and bioengineering converge on understanding RNA in disease, leading towards early diagnosis, targeted therapies, overcoming therapy resistance and improved patient outcomes." loading="lazy">
-          </picture>
-        </div>
-      </figure>
-    </div>
-  </section>
-
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="shell footer__inner">
@@ -181,6 +154,6 @@
     <img src="" alt="">
   </div>
 
-  <script src="assets/js/main.js?v=20260925d"></script>
+  <script src="assets/js/main.js?v=20260925b"></script>
 </body>
 </html>

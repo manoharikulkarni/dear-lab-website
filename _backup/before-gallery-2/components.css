@@ -1222,15 +1222,3 @@
 .pub-more__text { max-width: 56ch; color: var(--text-mute); line-height: 1.75; }
 .pub-more .btn { display: inline-flex; align-items: center; }
 .footer__social { flex-wrap: wrap; }
-
-/* Gallery: full-width group photo + masonry of the rest */
-.gallery-tile--wide { margin-bottom: clamp(0.6rem, 1.4vw, 1rem); }
-.gallery-tile--wide img { aspect-ratio: 1600 / 737; }
-.gallery-masonry {
-  margin-top: clamp(0.6rem, 1.4vw, 1rem);
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(0.6rem, 1.4vw, 1rem);
-}
-.gallery-masonry .gallery-tile img { aspect-ratio: 1 / 1; }
-@media (max-width: 900px) { .gallery-masonry { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
